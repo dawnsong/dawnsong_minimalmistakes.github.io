@@ -13,15 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Xiaowei Song | Research on robust machine learning with Big data on healthcare, MRI and cryoET/cryoEM
+email: dawnwei.song@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+twitter_username: dawnsongx 
+github_username: dawnsong 
+minimal_mistakes_skin: dark #default
 search: true
 
 # Build settings
@@ -114,4 +114,7 @@ tag_archive:
   type: liquid
   path: /tags/
 
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
+theme: minimal-mistakes-jekyll
+site.locale: en-US
+
