@@ -59,8 +59,8 @@ plugins:
 
 author:
   name   : "Xiaowei Song"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  avatar : "/assets/images/xiaowei-xihu.png"
+  bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
