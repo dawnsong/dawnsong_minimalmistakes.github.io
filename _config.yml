@@ -65,15 +65,15 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-link"
       url: "https://scholar.google.com/citations?user=b2M-4scAAAAJ"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/dawnsongx"
+    - label: "restfmri.net"
+      icon: "fab fa-fw fa-brain"
+      url: "http://restfmri.net/forum/blog/1"      
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dawnsong"
-    - label: "restfmri.net"
-      icon: "fab fa-fw fa-brain"
-      url: "http://restfmri.net/forum/blog/1"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/dawnsongx"
 
 footer:
   links:
