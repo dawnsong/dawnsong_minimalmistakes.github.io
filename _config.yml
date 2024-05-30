@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Xiaowei Song | Research on robust machine learning with Big data on healthcare, MRI and cryoET/cryoEM
+title: Robustness Research 
 email: dawnwei.song@gmail.com
+locale: en-US
+#theme: minimal-mistakes-jekyll  #jekyll-theme-hacker
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Research on robust machine learning with Big data on healthcare, MRI and cryoET/cryoEM
 twitter_username: dawnsongx 
 github_username: dawnsong 
 minimal_mistakes_skin: dark #default
@@ -26,7 +26,7 @@ search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.26.1
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -58,7 +58,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Xiaowei Song"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
@@ -114,7 +114,4 @@ tag_archive:
   type: liquid
   path: /tags/
 
-#theme: jekyll-theme-hacker
-theme: minimal-mistakes-jekyll
-site.locale: en-US
 
