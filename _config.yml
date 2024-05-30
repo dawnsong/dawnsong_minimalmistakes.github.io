@@ -62,7 +62,7 @@ author:
   avatar : "/assets/images/xiaowei-xihu.png"
   bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM."
   links:
-    - label: "Website"
+    - label: "Google Scholar"
       icon: "fas fa-fw fa-link"
       url: "https://scholar.google.com/citations?user=b2M-4scAAAAJ"
     - label: "Twitter"
