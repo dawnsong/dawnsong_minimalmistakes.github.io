@@ -42,12 +42,12 @@ g { color: Green }
 - Statistician, National Institute on Drug Abuse of National institute of Health (NIDA, NIH: 2013 – Feb 2024 as a Kelly contractor, Feb 2024 - now, as a guest researcher): Working on longitudinal data analysis (2 journal papers published), cross-species comparison (i.e., non-human primate vs human. 1 journal paper published, 1 in preparation).
 - Part-time Neuroimaging programmer, Northwestern University (2013 – 2021): Web-based Parallel Optimized Quality assurance and Robust pipelines for various MRI data (2 conference papers).
 - Assistant researcher, Institute of Biophysics, Chinese Academy of Science (2008 – 2012).
-- Professional software coder (using C++ or Delphi), 2004 – 2006.
+- Professional software coder (using C/C++ or Pascal/Delphi), 2004 – 2006.
 - Automation engineer, 150 rolling mill, Tegang corporation, Shougang group, 2003 – 2004.
 
-## PUBLICATION (* indicates corresponding author, with my major contributions  listed under each paper. <r>red</r> font indicates journal paper.)
+## PUBLICATION
 
-(Full [google scholar paper list](http://scholar.google.com/citations?user=b2M-4scAAAAJ):[ http://scholar.google.com/citations?user=b2M-4scAAAAJ ](http://scholar.google.com/citations?user=b2M-4scAAAAJ))
+(* indicates corresponding author, with my major contributions  listed under each paper. <r>red</r> font indicates journal paper. Full [google scholar paper list](http://scholar.google.com/citations?user=b2M-4scAAAAJ):[ http://scholar.google.com/citations?user=b2M-4scAAAAJ ](http://scholar.google.com/citations?user=b2M-4scAAAAJ))
 
 1. <o>**Xiaowei Song**</o>, Zhang-Ye Dong, Xiang-Yu Long, Su-Fang Li, Xi-Nian Zuo, Chao-Zhe Zhu, Yong He, Chao-Gan Yan, Yu-Feng Zang*. (2011) REST: A Toolkit for Resting-State Functional Magnetic Resonance Imaging Data Processing. <r>PLoS ONE</r> 6(9): e25031.
 
