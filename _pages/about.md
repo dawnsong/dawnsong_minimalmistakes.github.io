@@ -21,9 +21,9 @@ g { color: Green }
 
 ## SKILLS
 
-- Core Skills: Robust Statistical estimation & detection | Machine learning, Data Analysis/Mining, Big Data
+- Core Skills: Robust Statistical estimation & detection,  Machine learning, Data Analysis/Mining, Big Data
 - Programming Languages: Python/R/Julia, SQL, MATLAB, C/C++, Pascal/Delphi
-- Tools: Jupyter Notebook, RStudio, Singularity, AWS, Hadoop, Spark, SQL Servers, Databricks/Snowflake/MLflow/AWS Lambda|Q|bedrock|SageMaker
+- Tools: Jupyter Notebook, RStudio, Singularity, AWS, Hadoop, Spark, SQL Servers, Databricks/Snowflake/MLflow/ AWS Lambda\|Q\|bedrock\|SageMaker
 - Machine learning packages: TensorFlow/pytorch, Scikit-learn, SPAMs and my own REST package for fMRI.
 - Statistic and Machine learning models: Anomaly detection by principal component analysis (PCA), independent component analysis (ICA) and Dictionary learning (DL), Deep neural network learning (convolution neural-network, graphical signal processing, graphical convolutional neuro-network, Regression/Estimation (Best linear unbiased estimator, or BLUE estimator), Random Forest, Cluster analysis (including K-means, incremental K-means, Bregman divergence based K-means), K-nearest neighbor (k-NN) …
 - Mathematical optimizations: gradient descent, online/stochastic gradient descent, fixed point, pre-conditioned stochastic descent ...
