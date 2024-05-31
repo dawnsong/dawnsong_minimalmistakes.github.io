@@ -16,5 +16,8 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
   gem "minimal-mistakes-jekyll"
   gem "jekyll-scholar"
+  gem "jekyll-mentions"
+  gem "jekyll-redirect-from"
+  gem "jekyll-seo-tag"
 end
 

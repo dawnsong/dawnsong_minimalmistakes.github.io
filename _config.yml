@@ -56,6 +56,10 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-algolia
 
 author:
   name   : "Xiaowei Song"
@@ -122,3 +126,7 @@ comments:
     appid: 397576196611119 # optional
     num_posts: 5 # 5 (default)
     colorscheme: "dark" # "light" (default), "dark"
+
+lunr:
+  search_within_pages: true
+  search_full_content: false # true might impact page loading performance
