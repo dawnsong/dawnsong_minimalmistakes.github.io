@@ -16,7 +16,8 @@
 title: Robustness Research 
 email: dawnwei.song@gmail.com
 locale: en-US
-#theme: minimal-mistakes-jekyll  #jekyll-theme-hacker
+# theme: minimal-mistakes-jekyll  #jekyll-theme-hacker
+remote_theme: mmistakes/minimal-mistakes@4.26.1 #required by github.io
 description: >- # this means to ignore newlines until "baseurl:"
   Research on robust machine learning with Big data on healthcare, MRI and cryoET/cryoEM
 twitter_username: dawnsongx 
@@ -36,7 +37,6 @@ kramdown:
   # parse_block_html: true
   # parse_span_html: true
   # parse_block_text: true
-remote_theme: mmistakes/minimal-mistakes@4.26.1
 # Outputting
 permalink: /:categories/:title/
 paginate: 10 # amount of posts to show
@@ -106,7 +106,7 @@ defaults:
   - scope:
       path: ""
       type: posts
-    values:
+    values:    
       layout: single
       author_profile: true
       read_time: true
@@ -115,6 +115,14 @@ defaults:
       share: true
       related: true
       show_date: true
+      show_read_time: true
+      show_tags: true
+      show_categories: true      
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "cog"
+      toc_sticky: true
+
   # _pages
   - scope:
       path: "_pages"
@@ -122,6 +130,14 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
+      show_read_time: true
+      show_tags: true
+      show_categories: true      
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "cog"
+      toc_sticky: true
 
 category_archive:
   type: liquid
