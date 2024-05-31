@@ -130,3 +130,9 @@ comments:
 lunr:
   search_within_pages: true
   search_full_content: false # true might impact page loading performance
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-BYFL6HDBJH"
+    anonymize_ip: false # default  
