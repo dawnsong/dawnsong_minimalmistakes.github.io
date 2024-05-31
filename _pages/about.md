@@ -1,6 +1,7 @@
 ---
 permalink: /about/
 title: "Xiaowei Song's Resume (CV)"
+classes: wide
 ---
 
 <style>
