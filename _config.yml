@@ -26,6 +26,16 @@ search: true
 
 # Build settings
 markdown: kramdown
+kramdown:
+  list_indent: 2
+  input: GFM #default ,  GitHub Flavored Markdown (GFM) processor
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    line_numbers: table
+    bold_every: 5
+  # parse_block_html: true
+  # parse_span_html: true
+  # parse_block_text: true
 remote_theme: mmistakes/minimal-mistakes@4.26.1
 # Outputting
 permalink: /:categories/:title/
@@ -64,7 +74,7 @@ plugins:
 author:
   name   : "Xiaowei Song"
   avatar : "/assets/images/xiaowei-xihu.png"
-  bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM. <br/>Open for collaborations: dawnwei.song AT gmail.com"
+  bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM. <br/>Open for collaborations: dawnwei.song (AT) gmail.com"
   links:
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"

@@ -37,10 +37,10 @@ g { color: Green }
   - <details><summary>DME referral provider-based machine learning</summary> focuses on exploring the referral doctors features among the tri-party (billing/rendering doctors, referral doctors and patients). This model is still under active development and pending with more model methods comparison to achieve better detection on FWA (fraud, waste, and abuse).</details>
   - <details><summary>Web-scraping</summary>
 
-  
-    - on FDA, FTC warning letters, especially using ChatGPT to digest the FTC PDF-based warning letters to extract meaningful leads information.
-    - On npidb etc. patients' reviews website to find out bad reviews on prescribers.
-    - On ups.com, fedex.com to find out all their store addresses such that finding false mail P.O. box that may lead to fraud behaviors. 
+    - on FDA, FTC warning letters, especially using ChatGPT to digest the FTC PDF-based warning letters to extract meaningful leads information.<br/>
+    - on npidb etc. patients' reviews website to find out bad reviews on prescribers.<br/>
+    - on ups.com, fedex.com to find out all their store addresses such that finding false mail P.O. box that may lead to fraud behaviors.
+
     </details>
   - <details><summary>Data warehouses</summary> on Medicare Part A, B , DME, D claim data; Medicare Provider Enrollment, Chain, and Ownership System (PECOS), UCM, BIU and compromised data.</details>
 - Statistician, National Institute on Drug Abuse of National institute of Health (NIDA, NIH: 2013 – Feb 2024 as a Kelly contractor, Feb 2024 - now, as a guest researcher): Working on longitudinal data analysis (2 journal papers published), cross-species comparison (i.e., non-human primate vs human. 1 journal paper published, 1 in preparation).
