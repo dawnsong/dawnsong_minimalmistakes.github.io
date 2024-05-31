@@ -96,9 +96,11 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
+      words_per_minute: 200 #default is 200
       comments: true
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
@@ -114,4 +116,9 @@ tag_archive:
   type: liquid
   path: /tags/
 
-
+comments:
+  provider: "facebook"
+  facebook:
+    appid: 397576196611119 # optional
+    num_posts: 5 # 5 (default)
+    colorscheme: "dark" # "light" (default), "dark"
