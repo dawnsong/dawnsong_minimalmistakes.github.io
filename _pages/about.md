@@ -80,7 +80,7 @@ g { color: Green }
    - a. I analyzed L1/Robust-PCA methods in an intuitive way
    - b. I proposed and proved a most efficient PCA method, which also has minimum memory footprint
 
-7. **<o>Xiaowei Song</o>*, S Bhinge, RL Quiton, T Adalı. (2019) An ICA based approach for steady-state and transient analysis of task fMRI data: Application to study of thermal pain response. <r>Journal of neuroscience methods</r>, 326, 108356.
+7. **<o>Xiaowei Song</o>***, S Bhinge, RL Quiton, T Adalı. (2019) An ICA based approach for steady-state and transient analysis of task fMRI data: Application to study of thermal pain response. <r>Journal of neuroscience methods</r>, 326, 108356.
 
    - a. Traditional fusion studies focus on joining static features, ignoring the dynamic changes, or treating dynamical signals as noise
    - b. Traditional dynamical studies, especially sliding window-based approaches, treat signal as steady state within a short period
