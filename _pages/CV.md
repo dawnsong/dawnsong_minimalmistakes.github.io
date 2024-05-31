@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /cv/
 title: "Xiaowei Song's Resume (CV)"
 classes: wide
 ---
