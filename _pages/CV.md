@@ -38,7 +38,9 @@ g { color: Green }
   - <details><summary>Web-scraping</summary>
   
       - on FDA, FTC warning letters, especially using ChatGPT to digest the FTC PDF-based warning letters to extract meaningful leads information.
+
       - On npidb etc. patients' reviews website to find out bad reviews on prescribers.
+
       - On ups.com, fedex.com to find out all their store addresses such that finding false mail P.O. box that may lead to fraud behaviors.
  
     </details>
