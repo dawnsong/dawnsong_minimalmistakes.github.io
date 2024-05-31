@@ -64,7 +64,7 @@ plugins:
 author:
   name   : "Xiaowei Song"
   avatar : "/assets/images/xiaowei-xihu.png"
-  bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM. Open for collaborations: dawnwei.song AT gmail.com"
+  bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM. <br/>Open for collaborations: dawnwei.song AT gmail.com"
   links:
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"
