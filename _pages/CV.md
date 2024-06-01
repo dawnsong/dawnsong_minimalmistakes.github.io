@@ -1,7 +1,7 @@
 ---
 permalink: /cv/
 title: "Xiaowei Song's Resume (CV)"
-classes: wide
+# classes: wide #wide mode makes the navigation TOC be top, instead of right sticky
 ---
 
 <style>
