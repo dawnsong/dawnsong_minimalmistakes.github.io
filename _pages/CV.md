@@ -29,7 +29,7 @@ g { color: Green }
 - Statistic and Machine learning models: Anomaly detection by principal component analysis (PCA), independent component analysis (ICA) and Dictionary learning (DL), Deep neural network learning (convolution neural-network, graphical signal processing, graphical convolutional neuro-network, Regression/Estimation (Best linear unbiased estimator, or BLUE estimator), Random Forest, Cluster analysis (including K-means, incremental K-means, Bregman divergence based K-means), K-nearest neighbor (k-NN) …
 - Mathematical optimizations: gradient descent, online/stochastic gradient descent, fixed point, pre-conditioned stochastic descent ...
 
-## Work Experience
+## Work Experiences
 
 - Data analyst Senior, GDIT (PIMASC, federal civilian department, HHS CMS contractor) (May 2022 -- Present);
   - <details><summary>Home health assistance (HHA) claims analysis</summary>,  I used natural language processing (NLP) techniques to encode HCPCS and ICD-10-CM codes, with long-short term memory (LSTM)– autoencoder based deep learning, and have achieved better performance than Med-BERT (Rasmy, L., Xiang, Y., Xie, Z., Tao, C., & Zhi, D. (2021). Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction. NPJ digital medicine, 4(1), 86.).</details>
