@@ -49,9 +49,9 @@ g { color: Green }
 - Professional software coder (using C/C++ or Pascal/Delphi), 2004 – 2006.
 - Automation engineer, 150 rolling mill, Tegang corporation, Shougang group, 2003 – 2004.
 
-## PUBLICATION
+## Representitve Publications
 
-(* indicates corresponding author, with my major contributions  listed under each paper. <r>red</r> font indicates journal paper. Full [google scholar paper list](http://scholar.google.com/citations?user=b2M-4scAAAAJ){:target="_blank"}: [ http://scholar.google.com/citations?user=b2M-4scAAAAJ ](http://scholar.google.com/citations?user=b2M-4scAAAAJ){:target="_blank"})
+(* indicates corresponding author, with my major contributions  listed under each paper. <r>red</r> font indicates journal paper. Full list: [ http://scholar.google.com/citations?user=b2M-4scAAAAJ ](http://scholar.google.com/citations?user=b2M-4scAAAAJ){:target="_blank"})
 
 1. **<o>Xiaowei Song</o>**, Zhang-Ye Dong, Xiang-Yu Long, Su-Fang Li, Xi-Nian Zuo, Chao-Zhe Zhu, Yong He, Chao-Gan Yan, Yu-Feng Zang*. (2011) REST: A Toolkit for Resting-State Functional Magnetic Resonance Imaging Data Processing. <r>PLoS ONE</r> 6(9): e25031.
 
