@@ -10,7 +10,8 @@ o { color: Orange }
 g { color: Green }
 </style>
 
-## Senior Data Analyst @ GDIT Federal Civilian | PIMAS (Program Integrity Modeling & Analytic Services)
+## Senior Data Analyst 
+> @ GDIT Federal Civilian | PIMAS (Program Integrity Modeling & Analytic Services)
 
 ## Educations
 

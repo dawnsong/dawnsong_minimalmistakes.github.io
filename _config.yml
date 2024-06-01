@@ -120,7 +120,7 @@ defaults:
       show_categories: true      
       toc: true
       toc_label: "Contents"
-      toc_icon: "cog"
+      toc_icon: "cloud-moon-rain" # "cog"
       toc_sticky: true
 
   # _pages
@@ -136,7 +136,7 @@ defaults:
       show_categories: true      
       toc: true
       toc_label: "Contents"
-      toc_icon: "cog"
+      toc_icon: "cloud-sun-rain"
       toc_sticky: true
 
 category_archive:
