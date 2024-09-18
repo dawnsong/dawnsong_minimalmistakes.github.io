@@ -40,28 +40,58 @@ function generateParam(data) {
 function hifini(key, param){
     var url = 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param);    
     return url ;
-    
+    var k=key +'&'+ param;
     console.log(url);
-    var c=Cookies.get(key +'&'+ param);
-    console.log(c);
-    if(c == null || c == '') {
-        var jqxhr = $.get( url, function(result) {
-            // alert( "success" );
-            // Cookies.set(key +'&'+ param, url);
-            console.log(result);
-          })
-            .done(function() {
-              alert( "second success" );
-            })
-            .fail(function() {
-              alert( "error" );
-            })
-            .always(function() {
-              alert( "finished" );
-            });
-        // Cookies.set(key +'&'+ param, url);
+    var v=Cookies.get(k);
+    console.log(v);
+    if(v) {
+        url =v;
     }else{
-        // url =c; 
+        // var jqxhr = $.get( url, function(result) {
+        //     console.log( "success "   + url);
+        //     // Cookies.set(key +'&'+ param, url);
+        //     console.log(result);
+        //   })
+        //     .done(function() {
+        //         console.log( "second success "  + url);
+        //     })
+        //     .fail(function() {
+        //         console.log( "error "  + url);
+        //     })
+        //     .always(function() {
+        //         console.log( "finished " + url);
+        //     });
+        // Cookies.set(key +'&'+ param, url); 
+        $.ajax({
+            Cache: true,
+            url: url,            
+            Headers:{'Access-Control-Allow-Origin': '*', 'Sec-Fetch-Dest':'audio', 'Sec-Fetch-Mode':'no-cors', 'Sec-Fetch-Site':'cross-site', 'Accept':'*/*', 'dnt':1, 'priority':'i', 'range':'bytes=0-', },
+            // crossDomain: true,            
+            dataType:  'jsonp', //'audio/mpeg', //
+            type: 'GET',
+            success: function(data) {
+              // Handle the response data
+              console.log(data);
+              alert(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              // Handle the error
+              console.log(jqXHR); //.getAllResponseHeaders() );              
+              
+              var qqURL = jqXHR.getResponseHeader('Location');
+              console.log(textStatus +" | "+ errorThrown + " | " +qqURL );
+            },
+            statusCode: {
+              302: function(jqXHR) {
+                // Handle the redirect manually
+                var qqURL = jqXHR.getResponseHeader('Location');
+                alert(qqURL);
+                console.log('302'+ qqURL);
+                Cookies.set(k, qqURL);
+                url = qqURL;                
+              }
+            }
+        });
     }
     console.log(url);    
     return url ;
