@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "aplayer": "^1.10.1"
+    "aplayer": "^1.10.1",
+    "js-cookie": "^3.0.5"
   }
 }

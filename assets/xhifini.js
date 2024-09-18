@@ -38,5 +38,9 @@ function generateParam(data) {
 }
 
 function hifini(key, param){
-    return 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param)
+    var url = 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param);
+    var c=Cookies.get(key +'&'+ param);
+    console.log(c);
+    Cookies.set(key +'&'+ param, url);
+    return url ;
 }
