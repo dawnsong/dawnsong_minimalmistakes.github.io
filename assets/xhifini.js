@@ -39,8 +39,27 @@ function generateParam(data) {
 
 function hifini(key, param){
     var url = 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param);
+    console.log(url);
     var c=Cookies.get(key +'&'+ param);
-    console.log(c);
-    Cookies.set(key +'&'+ param, url);
+    if(c === null || c === '') {
+        var jqxhr = $.get( url, function(result) {
+            // alert( "success" );
+            // Cookies.set(key +'&'+ param, url);
+            console.log(result);
+          })
+            .done(function() {
+              alert( "second success" );
+            })
+            .fail(function() {
+              alert( "error" );
+            })
+            .always(function() {
+              alert( "finished" );
+            });
+        // Cookies.set(key +'&'+ param, url);
+    }else{
+        url =c; 
+    }
+    console.log(url);    
     return url ;
 }
