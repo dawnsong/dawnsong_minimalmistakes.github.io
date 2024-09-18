@@ -41,7 +41,7 @@ function hifini(key, param){
     var url = 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param);
     console.log(url);
     var c=Cookies.get(key +'&'+ param);
-    if(c === null || c === '') {
+    if(c === null || c === '' || c === undefined) {
         var jqxhr = $.get( url, function(result) {
             // alert( "success" );
             // Cookies.set(key +'&'+ param, url);
