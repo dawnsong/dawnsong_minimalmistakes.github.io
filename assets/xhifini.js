@@ -36,3 +36,7 @@ function generateParam(data) {
   }
   return base32Encode(outText);
 }
+
+function hifini(key, param){
+    return 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param)
+}
