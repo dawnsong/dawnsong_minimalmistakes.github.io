@@ -85,23 +85,22 @@ def rsleep(maxSeconds=180, minSeconds=1):
 
 #----------------------------------------------------------------------------
 def exportFav(favdb):
-  with open(f"songs.txt", 'w') as f:
-    f.write("")
+  with open(f"songs.txt", 'w') as f: f.write("")
   for k in favdb.keys():
     if re.match(r'url:', k):
       print(f"exporting {k}: {favdb[k]}")
       kk=k.replace('url:','')
-      name  =re.sub('__.*', '', kk)
-      artist=re.sub('.*__', '', kk)
+      artist =re.sub('__.*', '', kk)
+      name=re.sub('.*__', '', kk)
       url=favdb[k]
       cover=favdb[f'pic:{kk}']
-      with open(f"songs.txt", 'w+') as f:
-        f.write(f"""
-\{name: {name},
+      with open(f"songs.txt", 'a') as f:
+        f.write(f"""{{
+name: {name},
 artist: {artist},
 url: '{url}'
 cover: {cover}
-\},""")
+}},""")
     
 #----------------------------------------------------------------------------
 def getFavSongs():
