@@ -96,11 +96,13 @@ def exportFav(favdb):
       cover=favdb[f'pic:{kk}']
       with open(f"songs.txt", 'a') as f:
         f.write(f"""{{
-name: {name},
-artist: {artist},
-url: '{url}'
-cover: {cover}
+name: {name} ,
+artist: {artist} ,
+url: '{url}' ,
+cover: {cover}  ,
 }},""")
+  #replace my template with the song lists
+  
     
 #----------------------------------------------------------------------------
 def getFavSongs(url, favdb={}):
