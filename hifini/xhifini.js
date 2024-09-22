@@ -40,6 +40,8 @@ function generateParam(data) {
 function hifini(key, param){
     var url = 'https://hifini.com/get_music.php?key=' + key + '&p=' + generateParam(param);    
     return url ;
+
+    //#network level can get 302 redirected URL
     var k=key +'&'+ param;
     console.log(url);
     var v=Cookies.get(k);
@@ -47,39 +49,19 @@ function hifini(key, param){
     if(v) {
         url =v;
     }else{
-        // var jqxhr = $.get( url, function(result) {
-        //     console.log( "success "   + url);
-        //     // Cookies.set(key +'&'+ param, url);
-        //     console.log(result);
-        //   })
-        //     .done(function() {
-        //         console.log( "second success "  + url);
-        //     })
-        //     .fail(function() {
-        //         console.log( "error "  + url);
-        //     })
-        //     .always(function() {
-        //         console.log( "finished " + url);
-        //     });
-        // Cookies.set(key +'&'+ param, url); 
         $.ajax({
             Cache: true,
             url: url,            
-            Headers:{'Access-Control-Allow-Origin': '*', 'Sec-Fetch-Dest':'audio', 'Sec-Fetch-Mode':'no-cors', 'Sec-Fetch-Site':'cross-site', 'Accept':'*/*', 'dnt':1, 'priority':'i', 'range':'bytes=0-', },
+            Headers:{'Access-Control-Allow-Origin': null, 
+                'Accept':'*/*', 'dnt':1, 'priority':'i', 'range':'bytes=0-1',
+                'sec-fetch-dest':'audio', 'sec-fetch-mode':'no-cors', 'sec-fetch-site':'cross-site',  },
             // crossDomain: true,            
-            dataType:  'jsonp', //'audio/mpeg', //
+            dataType:  'audio', //'jsonp', //'audio/mpeg', //
             type: 'GET',
             success: function(data) {
               // Handle the response data
               console.log(data);
               alert(data);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-              // Handle the error
-              console.log(jqXHR); //.getAllResponseHeaders() );              
-              
-              var qqURL = jqXHR.getResponseHeader('Location');
-              console.log(textStatus +" | "+ errorThrown + " | " +qqURL );
             },
             statusCode: {
               302: function(jqXHR) {
@@ -88,9 +70,17 @@ function hifini(key, param){
                 alert(qqURL);
                 console.log('302'+ qqURL);
                 Cookies.set(k, qqURL);
-                url = qqURL;                
+                url = qqURL;
               }
-            }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {                
+              console.log('error: ' + errorThrown)
+              console.log(jqXHR); //.getAllResponseHeaders() );              
+              
+              var qqURL = jqXHR.getResponseHeader('Location');
+              console.log(textStatus +" | "+ errorThrown + " | " +qqURL );
+            },
+            
         });
     }
     console.log(url);    

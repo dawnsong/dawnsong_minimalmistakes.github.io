@@ -10,12 +10,12 @@ var ap = new APlayer({
   loop: 'all',
   order: 'random',
   volume: 1,
-  preload: 'auto',
+  preload: 'none', //'auto',
   showlrc: false,
   mutex: true,
-  theme: '#0a0a0f',// '#ad7a86', // '#b7daff', 
+  theme:  '#ad7a86', // '#b7daff',  //'#0a0a0f',//
   listFolded: true,
-  music: [
+  audio: [
     {
       title: '问情',
       author:'江淑娜',
@@ -37,10 +37,30 @@ var ap = new APlayer({
     {
       title: '欢笑之歌',
       author:'叶倩文',
-      url: hifini('PwPzIdO7skVjTyrULJGbOunXD6maal9ZCmNJtEqaybsTPdlhl7nlUgOwIZCB7H7o7nVbADzkew', 'mGbZXr6LPYX3QQMWL0ROzbs7AA3z7IRWZsyQU1I3dEZuESnwswyKDutPEPFJaPegXtV2MJvXnKUwwwHiFiNicomSpr9uNFICwwwHiFiNicomW4RMy6r8kpT6Zn98H2kw'),  
+      url: hifini('0bIdmCMIXE5TivXF7wwwHiFiNicomQkZDcGRB2Zf86ScsTtJ0OsyAr4PMzTzrhxcctB5lDFnJC6FTr1xxHiFiNixxi0BUg', 'nOZPEV8NQjEbdh20TQbxxHiFiNixx34fBrx2nyxxHiFiNixxCv5qXZqoVVnDxxHiFiNixxL4OxQcKl4vJJocOOguXgwPnXKJVol4X85pTcuiqfPD4UE6Wt6dwwwHiFiNicomCSTB3kPnNFAQ'),  
       pic: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003BfOMK0fTtdj.jpg'
     },
   ]
 });
+//save decoded hifini URLs (i.e., qq music url) to local cookies
+ap.on('play', function () {
+  console.log('Start playing song: ' + ap.list.index );
+  console.log('URL: ' + ap.list.audios[ap.list.index].url);
+  console.log(ap.list.audios[ap.list.index]);
+  //console.log(null==ap.audios); //true
+  console.log("src: "+ ap.audio.src)
+  console.log(ap.audio)  
+});
+
+ap.on('loadeddata', function () {
+  console.log('loadeddata of song: ' + ap.list.index );
+  console.log('URL: ' + ap.list.audios[ap.list.index].url);
+  console.log(ap.list.audios[ap.list.index]);
+  //console.log(null==ap.audios); //true
+  console.log("src: "+ ap.audio.src)
+
+  console.log(ap.audio.buffered)
+});
+
 </script>
 <!-- end custom footer snippets -->

@@ -1,0 +1,43 @@
+<!-- start custom footer snippets -->
+<div id="aplayer"></div>
+<script>
+var ap = new APlayer({
+  element: document.getElementById('aplayer'),
+  narrow: false,
+  //fixed: true, //<!--吸底模式 -->  
+  mini: false, 
+  autoplay: false, // Google Chrome disabled autoplay and require user's response before auto playback
+  loop: 'all',
+  order: 'random',
+  volume: 1,
+  preload: 'none', //'auto',
+  showlrc: false,
+  mutex: true,
+  theme:  '#ad7a86', // '#b7daff',  //'#0a0a0f',//
+  listFolded: true,
+  audio: [
+    %musicDictList%
+  ]
+});
+//save decoded hifini URLs (i.e., qq music url) to local cookies
+ap.on('play', function () {
+  console.log('Start playing song: ' + ap.list.index );
+  console.log('URL: ' + ap.list.audios[ap.list.index].url);
+  console.log(ap.list.audios[ap.list.index]);
+  //console.log(null==ap.audios); //true
+  console.log("src: "+ ap.audio.src)
+  console.log(ap.audio)  
+});
+
+ap.on('loadeddata', function () {
+  console.log('loadeddata of song: ' + ap.list.index );
+  console.log('URL: ' + ap.list.audios[ap.list.index].url);
+  console.log(ap.list.audios[ap.list.index]);
+  //console.log(null==ap.audios); //true
+  console.log("src: "+ ap.audio.src)
+
+  console.log(ap.audio.buffered)
+});
+
+</script>
+<!-- end custom footer snippets -->
