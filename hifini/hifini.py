@@ -103,9 +103,11 @@ cover: {cover}
 }},""")
     
 #----------------------------------------------------------------------------
-def getFavSongs():
-  favdb={}
+def getFavSongs(url, favdb={}):
   sbd=sb.driver  
+  sbd.uc_open_with_tab(url)
+  
+  favPage={}  
   sbd.wait_for_element_present("div.subject", timeout=10)
   songs=sbd.find_elements(By.XPATH, '//div[@class="subject"]/a[2]') #counting from 1, not 0!
   hrefs=[None]*len(songs)
@@ -114,11 +116,17 @@ def getFavSongs():
     print(songs[i].text)
     songName=re.sub(r"\[.*", r"", songs[i].text)
     href = songs[i].get_attribute('href') 
-    favdb[f'song:{songName}']=href
+    favPage[f'song:{songName}']=href
     hrefs[i] = f'song:{songName}'
   print(hrefs)
   for i in range(len(hrefs)):    
-    href=favdb[hrefs[i]]
+    href=favPage[hrefs[i]]
+    name  =re.sub(r'.*《(.*)》', '\1', songName).strip()
+    artist=re.sub(r'《.*》', '', songName).strip()
+    if f'url:{artist}__{name}' in favdb:
+      logging.info(f"url:{artist}__{name} already exists in favdb: {favdb[f'url:{artist}__{name}']}")
+      continue
+    
     sbd.uc_open_with_tab(href)
     # rsleep(3)
     # sbd.wait_for_element_present("div.player4", timeout=20)
@@ -132,8 +140,8 @@ def getFavSongs():
     author=sbd.execute_script("return ap4.music.author")
     pic=sbd.execute_script("return ap4.music.pic")
     print(f'{title} - {author} : {mUrl}')
-    favdb[f'pic:{author}__{title}']=pic
-    favdb[f'url:{author}__{title}']=mUrl
+    favPage[f'pic:{author}__{title}']=pic
+    favPage[f'url:{author}__{title}']=mUrl
     #get redirected QQ url for the music
     # #this will download the music
     # sbd.uc_open_with_tab(f'https://hifini.com/{mUrl}')
@@ -143,12 +151,12 @@ def getFavSongs():
     qUrl=None
     if r.status_code == 200: 
       qUrl=r.url
-      favdb[f'url:{author}__{title}']=qUrl      
+      favPage[f'url:{author}__{title}']=qUrl      
     print(qUrl)    
     print(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
     # break
-  return favdb
+  return favPage
 
 def getFavList(favdb={}):  
   sbd=sb.driver
@@ -162,9 +170,8 @@ def getFavList(favdb={}):
   print(f"npage= {npage}")
   
   for i in range(1, npage+1):  
-    # sbd.switch_to_window(win1)
-    sbd.uc_open_with_tab(f'https://hifini.com/my-favorites-{i}.htm?orderby=asc')
-    psongs=getFavSongs()
+    # sbd.switch_to_window(win1)    
+    psongs=getFavSongs(f'https://hifini.com/my-favorites-{i}.htm?orderby=asc', favdb)
     print(psongs)
     favdb.update(psongs)
     # print(favdb)
