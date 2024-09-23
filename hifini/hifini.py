@@ -116,19 +116,21 @@ def getFavSongs(url, favdb={}):
   #gather all links for this page
   for i in range(len(songs)): 
     print(songs[i].text)
-    songName=re.sub(r"\[.*", r"", songs[i].text)
+    songName=re.sub(r"\[.*", r"", songs[i].text).strip()
     href = songs[i].get_attribute('href') 
     favPage[f'song:{songName}']=href
     hrefs[i] = f'song:{songName}'
   print(hrefs)
-  for i in range(len(hrefs)):    
-    href=favPage[hrefs[i]]
-    name  =re.sub(r'.*《(.*)》', '\1', songName).strip()
+  for i in range(len(hrefs)): 
+    songName=re.sub(r'song:', '', hrefs[i])    
+    name  =re.sub(r'.*《([^》]*)》', r'\1', songName).strip()
     artist=re.sub(r'《.*》', '', songName).strip()
+    logging.info(f"Checking if {artist}__{name} already has QQ URL in favdb")
     if f'url:{artist}__{name}' in favdb:
       logging.info(f"url:{artist}__{name} already exists in favdb: {favdb[f'url:{artist}__{name}']}")
       continue
     
+    href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
     # rsleep(3)
     # sbd.wait_for_element_present("div.player4", timeout=20)
@@ -233,15 +235,16 @@ def main():
     # driver.switch_to.new_window('window')
     # win1=driver.current_window_handle
     # driver.switch_to.window(driver.window_handles[1])
-    
-    if op=='fav': #download my favorite songs' URLs
-      favdb = getFavList(favdb)
-    elif op=='sign': #sign to get 1 gold coin each day
-      pass
-    else:
-      logger.info('Unknown operation, fav/sign supported')
-      return
-    joblib.dump([favdb], fzdb) #save after parsing each NPI
-    exportFav(favdb)
+    try:
+      if op=='fav': #download my favorite songs' URLs
+        favdb = getFavList(favdb)
+      elif op=='sign': #sign to get 1 gold coin each day
+        pass
+      else:
+        logger.info('Unknown operation, fav/sign supported')
+        return
+    finally:  
+      joblib.dump([favdb], fzdb) #save after parsing each NPI
+      exportFav(favdb)
 if __name__ == "__main__": main()
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
