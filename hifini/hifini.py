@@ -102,7 +102,13 @@ url: '{url}' ,
 cover: '{cover}'  ,
 }},""")
   #replace my template with the song lists
-  
+  with open('../_includes/footer/custom.html.aplayerTemplate.html', 'r') as tpl:
+    with open('songs.txt', 'r') as songs:
+      with open('../_includes/footer/custom.html', 'w') as ft:
+        for line in tpl:
+          if '%musicDictList%' in line:
+            for sl in songs: ft.write(sl)
+          else: ft.write(line)
     
 #----------------------------------------------------------------------------
 def getFavSongs(url, favdb={}):
