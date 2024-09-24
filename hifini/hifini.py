@@ -88,7 +88,7 @@ def exportFav(favdb):
   with open(f"songs.txt", 'w') as f: f.write("")
   for k in favdb.keys():
     if re.match(r'url:', k):
-      print(f"exporting {k}: {favdb[k]}")
+      logging.info(f"exporting {k}: {favdb[k]}")
       kk=k.replace('url:','')
       artist =re.sub('__.*', '', kk)
       name=re.sub('.*__', '', kk)
@@ -169,11 +169,15 @@ def getFavSongs(url, favdb={}):
       #save mp3 to local
       ufn=qUrl.split('/')[-1]
       ufn=ufn.split('?')[0]
-      fn=f"songs/{author}__{title}__{ufn}"
+      ext=ufn.split('.')[1]
+      fn=f"songs/{author}__{title}.{ext}"
       if not Path(fn).exists():
+        logging.info(f"Downloading song {fn} from {qUrl}")
         with requests.get(qUrl, allow_redirects=True, stream=True) as r:
           with open(fn, 'wb') as f:
               shutil.copyfileobj(r.raw, f)
+      else:
+        logging.info(f"SONG file {fn} already exists, ignore downloading")
     print(qUrl)    
     print(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)

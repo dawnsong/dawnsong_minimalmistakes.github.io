@@ -8,7 +8,7 @@ var ap = new APlayer({
   order: 'random',
   volume: 1,
   preload: 'none', //'auto',
-  showlrc: true,
+  showlrc: false, //
   lrctype:3,
   mutex: true,
   theme:  '#ad7a86', // '#b7daff',  //'#0a0a0f',//
