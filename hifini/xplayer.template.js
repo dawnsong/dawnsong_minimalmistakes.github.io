@@ -13,8 +13,7 @@ var ap = new APlayer({
   mutex: true,
   theme:  '#ad7a86', // '#b7daff',  //'#0a0a0f',//
   listFolded: true,
-  audio: [
-    %musicDictList%
+  audio: [    
     {
       name: '心语',
       artist: '韩红',
@@ -22,6 +21,7 @@ var ap = new APlayer({
       lrc: '/hifini/心语-韩红.lrc',
       pic: 'http://img1.kuwo.cn/star/albumcover/500/29/33/2480739608.jpg',
     },
+    %musicDictList%
   ]
 });
 //save decoded hifini URLs (i.e., qq music url) to local cookies
