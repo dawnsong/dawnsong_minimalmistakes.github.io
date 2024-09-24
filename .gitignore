@@ -3,8 +3,9 @@ _site
 .jekyll-metadata
 Gemfile.lock
 servJekyll.sh~
-hifini/hifini-debug.ipynb
+*.ipynb
 *.log
 *.LOG
 *.z
 *.lock
+/hifini/songs/*

@@ -4,7 +4,7 @@
 
 import re
 import sys, os, subprocess, tempfile
-import requests
+import requests, shutil
 import urllib.request, urllib.parse
 from pathlib import Path 
 from datetime import datetime, timedelta
@@ -102,9 +102,11 @@ url: '{url}' ,
 cover: '{cover}'  ,
 }},""")
   #replace my template with the song lists
-  with open('../_includes/footer/custom.html.aplayerTemplate.html', 'r') as tpl:
+  # with open('../_includes/footer/custom.html.aplayerTemplate.html', 'r') as tpl:
+  with open('xplayer.template.js', 'r') as tpl:
     with open('songs.txt', 'r') as songs:
-      with open('../_includes/footer/custom.html', 'w') as ft:
+      # with open('../_includes/footer/custom.html', 'w') as ft:
+      with open('xplayer.js', 'w') as ft:
         for line in tpl:
           if '%musicDictList%' in line:
             for sl in songs: ft.write(sl)
@@ -131,10 +133,11 @@ def getFavSongs(url, favdb={}):
     songName=re.sub(r'song:', '', hrefs[i])    
     name  =re.sub(r'.*《([^》]*)》', r'\1', songName).strip()
     artist=re.sub(r'《.*》', '', songName).strip()
-    logging.info(f"Checking if {artist}__{name} already has QQ URL in favdb")
-    if f'url:{artist}__{name}' in favdb:
-      logging.info(f"url:{artist}__{name} already exists in favdb: {favdb[f'url:{artist}__{name}']}")
-      continue
+    # even qq music URL has time limit!
+    # logging.info(f"Checking if {artist}__{name} already has QQ URL in favdb")
+    # if f'url:{artist}__{name}' in favdb:
+    #   logging.info(f"url:{artist}__{name} already exists in favdb: {favdb[f'url:{artist}__{name}']}")
+    #   continue
     
     href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
@@ -160,8 +163,17 @@ def getFavSongs(url, favdb={}):
     r=requests.head(mUrl, allow_redirects=True, stream=False) #only metadata, not to download
     qUrl=None
     if r.status_code == 200: 
+      logging.info(f"header: {r}")      
       qUrl=r.url
-      favPage[f'url:{author}__{title}']=qUrl      
+      favPage[f'url:{author}__{title}']=qUrl
+      #save mp3 to local
+      ufn=qUrl.split('/')[-1]
+      ufn=ufn.split('?')[0]
+      fn=f"songs/{author}__{title}__{ufn}"
+      if not Path(fn).exists():
+        with requests.get(qUrl, allow_redirects=True, stream=True) as r:
+          with open(fn, 'wb') as f:
+              shutil.copyfileobj(r.raw, f)
     print(qUrl)    
     print(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
