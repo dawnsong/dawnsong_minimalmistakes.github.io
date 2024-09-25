@@ -163,13 +163,17 @@ def getFavSongs(url, favdb={}):
     r=requests.head(mUrl, allow_redirects=True, stream=False) #only metadata, not to download
     qUrl=None
     if r.status_code == 200: 
-      logging.info(f"header: {r}")      
+      logging.info(f"header: {r} , mUrl: {mUrl}")      
       qUrl=r.url
       favPage[f'url:{author}__{title}']=qUrl
       #save mp3 to local
       ufn=qUrl.split('/')[-1]
       ufn=ufn.split('?')[0]
-      ext=ufn.split('.')[1]
+      try:
+        ext=ufn.split('.')[1]
+      except Exception as e:
+        ext=''
+        logging.error(f"qURL={qUrl} |no extension Error|: {e}")
       fn=f"songs/{author}__{title}.{ext}"
       if not Path(fn).exists():
         logging.info(f"Downloading song {fn} from {qUrl}")
