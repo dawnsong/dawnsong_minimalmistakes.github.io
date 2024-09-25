@@ -1,3 +1,23 @@
+var songs=[
+  {
+    name: '心语',
+    artist: '韩红',
+    url: 'https://cs1.mp3.pm/listen/32055314/VWIycTVXa09TOHV0NWIzd25tSzZoNmVPakpYSFVyWlVDYkFTY1A0a0RCQnQ4Y1M2M3dldS9vY3UrZTlqMVZYVzRaZTZKY1Ryb05oRFFqUUY4MXpkK1dhRVZWU0h0Tnl0M0tEN1N2dXI3NTZ0OHlvbkh0L1I4M3VyYkp4ZXgwMlY/-_(mp3.pm).mp3' ,
+    lrc: '/hifini/心语-韩红.lrc',
+    pic: 'http://img1.kuwo.cn/star/albumcover/500/29/33/2480739608.jpg',
+  },
+  //%musicDictList
+];
+function getRandomSubarray(arr, size) {
+  var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
+  while (i-- > min) {
+      index = Math.floor((i + 1) * Math.random());
+      temp = shuffled[index];
+      shuffled[index] = shuffled[i];
+      shuffled[i] = temp;
+  }
+  return shuffled.slice(min);
+}
 var ap = new APlayer({
   element: document.getElementById('xplayer'),
   narrow: false,
@@ -13,16 +33,7 @@ var ap = new APlayer({
   mutex: true,
   theme:  '#ad7a86', // '#b7daff',  //'#0a0a0f',//
   listFolded: true,
-  audio: [    
-    {
-      name: '心语',
-      artist: '韩红',
-      url: 'https://cs1.mp3.pm/listen/32055314/VWIycTVXa09TOHV0NWIzd25tSzZoNmVPakpYSFVyWlVDYkFTY1A0a0RCQnQ4Y1M2M3dldS9vY3UrZTlqMVZYVzRaZTZKY1Ryb05oRFFqUUY4MXpkK1dhRVZWU0h0Tnl0M0tEN1N2dXI3NTZ0OHlvbkh0L1I4M3VyYkp4ZXgwMlY/-_(mp3.pm).mp3' ,
-      lrc: '/hifini/心语-韩红.lrc',
-      pic: 'http://img1.kuwo.cn/star/albumcover/500/29/33/2480739608.jpg',
-    },
-    %musicDictList%
-  ]
+  audio: getRandomSubarray(songs, 10)
 });
 //save decoded hifini URLs (i.e., qq music url) to local cookies
 // ap.on('play', function () {

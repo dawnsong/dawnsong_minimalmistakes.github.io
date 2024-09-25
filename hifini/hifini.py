@@ -108,7 +108,7 @@ cover: '{cover}'  ,
       # with open('../_includes/footer/custom.html', 'w') as ft:
       with open('xplayer.js', 'w') as ft:
         for line in tpl:
-          if '%musicDictList%' in line:
+          if '//%musicDictList' in line:
             for sl in songs: ft.write(sl)
           else: ft.write(line)
     
