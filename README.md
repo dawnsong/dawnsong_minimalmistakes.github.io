@@ -1,5 +1,6 @@
 # It is a dream to "Minimize Mistakes" in life
 # Minimal Mistakes remote theme starter
+[Here is the link to My CV](https://dawnsong.github.io/cv)
 
 Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
 
