@@ -168,7 +168,7 @@ def getFavSongs(url, favdb={}):
     # print(sbd.execute_script("return jQuery('ap4.list')"))
     # sbd.execute_script("jQuery('console.log(ap4)')")
     mUrl=sbd.execute_script("return ap4.music.url")
-    mUrl=f'https://hifini.com/{mUrl}'
+    if 'http' not in mUrl: mUrl=f'https://hifini.com/{mUrl}'
     title=sbd.execute_script("return ap4.music.title").strip()
     author=sbd.execute_script("return ap4.music.author").strip().replace('/', '-').replace('\\', '-')
     pic=sbd.execute_script("return ap4.music.pic")
