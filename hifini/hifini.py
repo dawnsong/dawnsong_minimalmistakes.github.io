@@ -84,6 +84,18 @@ def rsleep(maxSeconds=180, minSeconds=1):
   time.sleep(rsec)
 
 #----------------------------------------------------------------------------
+def fn2googleStorageURL(fn, qURL):
+  from urllib.parse import quote, unquote
+  gurl = f"https://storage.googleapis.com/xmusic/q/{fn}"
+  q=quote(gurl, safe=':/')
+  logging.info(f"{fn} -> {gurl}")
+  h=requests.head(q)
+  if h.status_code==200:
+    logging.info(f"{fn} size: {int(h.headers['Content-Length']) /1024./1024:.1f} MB,type: {h.headers['Content-Type']}")
+    return q
+  else: return qURL
+
+
 def exportFav(favdb):
   with open(f"songs.txt", 'w') as f: f.write("")
   for k in favdb.keys():
@@ -92,7 +104,10 @@ def exportFav(favdb):
       kk=k.replace('url:','')
       artist =re.sub('__.*', '', kk)
       name=re.sub('.*__', '', kk)
+      fk=f'file:{artist}__{name}'
       url=favdb[k]
+      if fk in favdb: url=fn2googleStorageURL(favdb[fk], favdb[k])      
+      rsleep(3)
       cover=favdb[f'pic:{kk}']
       with open(f"songs.txt", 'a') as f:
         f.write(f"""{{
@@ -126,18 +141,23 @@ def getFavSongs(url, favdb={}):
     print(songs[i].text)
     songName=re.sub(r"\[.*", r"", songs[i].text).strip()
     href = songs[i].get_attribute('href') 
-    favPage[f'song:{songName}']=href
-    hrefs[i] = f'song:{songName}'
+    favPage[f'hifini:{songName}']=href
+    hrefs[i] = f'hifini:{songName}'
   print(hrefs)
   for i in range(len(hrefs)): 
-    songName=re.sub(r'song:', '', hrefs[i])    
+    songName=re.sub(r'hifini:', '', hrefs[i])    
     name  =re.sub(r'.*《([^》]*)》', r'\1', songName).strip()
-    artist=re.sub(r'《.*》', '', songName).strip()
+    artist=re.sub(r'《.*》', '', songName).strip().replace('/', '-').replace('\\', '-')
     # even qq music URL has time limit!
     # logging.info(f"Checking if {artist}__{name} already has QQ URL in favdb")
     # if f'url:{artist}__{name}' in favdb:
     #   logging.info(f"url:{artist}__{name} already exists in favdb: {favdb[f'url:{artist}__{name}']}")
     #   continue
+    logging.info(f"Checking if {artist}__{name} already has song downloaded")
+    fk=f'file:{artist}__{name}'
+    if fk in favdb and Path(f'songs/{favdb[fk]}').exists():
+      logging.info(f"{fk} | songs/{favdb[fk]} already downloaded")
+      continue
     
     href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
@@ -149,12 +169,13 @@ def getFavSongs(url, favdb={}):
     # sbd.execute_script("jQuery('console.log(ap4)')")
     mUrl=sbd.execute_script("return ap4.music.url")
     mUrl=f'https://hifini.com/{mUrl}'
-    title=sbd.execute_script("return ap4.music.title")
-    author=sbd.execute_script("return ap4.music.author")
+    title=sbd.execute_script("return ap4.music.title").strip()
+    author=sbd.execute_script("return ap4.music.author").strip().replace('/', '-').replace('\\', '-')
     pic=sbd.execute_script("return ap4.music.pic")
     print(f'{title} - {author} : {mUrl}')
     favPage[f'pic:{author}__{title}']=pic
     favPage[f'url:{author}__{title}']=mUrl
+    favPage[f'file:{author}__{title}']=''
     #get redirected QQ url for the music
     # #this will download the music
     # sbd.uc_open_with_tab(f'https://hifini.com/{mUrl}')
@@ -175,6 +196,7 @@ def getFavSongs(url, favdb={}):
         ext=''
         logging.error(f"qURL={qUrl} |no extension Error|: {e}")
       fn=f"songs/{author}__{title}.{ext}"
+      favPage[f'file:{author}__{title}']=Path(fn).name #only basename      
       if not Path(fn).exists():
         logging.info(f"Downloading song {fn} from {qUrl}")
         with requests.get(qUrl, allow_redirects=True, stream=True) as r:
@@ -224,7 +246,7 @@ def getSeliumBase(fini='browser.ini'):
   cfg=ConfigObj(fini)
   chrome=cfg['chrome']
   args=chrome['arguments']
-  if 'proxy-server' in args: args['chromium-arg'] = f'{args['chromium-arg']} , --proxy-server={args["proxy-server"]}'
+  if 'proxy-server' in args: args['chromium-arg'] = f"{args['chromium-arg']} , --proxy-server={args['proxy-server']}"
   return SB(test=True,  uc_cdp=True, binary_location=chrome['chromePath'], user_data_dir=args['user-data-dir'], incognito=False, chromium_arg=args['chromium-arg']) #, proxy='5.161.74.235:8215')
       
 def main():
