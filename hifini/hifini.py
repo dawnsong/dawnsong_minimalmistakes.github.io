@@ -88,10 +88,11 @@ def fn2googleStorageURL(fn, qURL):
   from urllib.parse import quote, unquote
   gurl = f"https://storage.googleapis.com/xmusic/q/{fn}"
   q=quote(gurl, safe=':/')
-  logging.info(f"{fn} -> {gurl}")
+  logging.info(f"Trying {fn} -> {gurl}")
   h=requests.head(q)
-  if h.status_code==200:
-    logging.info(f"{fn} size: {int(h.headers['Content-Length']) /1024./1024:.1f} MB,type: {h.headers['Content-Type']}")
+  logging.info(f"{fn} size: {int(h.headers['Content-Length']) /1024./1024:.1f} MB,type: {h.headers['Content-Type']}")
+  if h.status_code==200 and 'audio' in h.headers['Content-Type'].lower():
+    logging.info(f"Found audio {fn} in {gurl}")
     return q
   else: return qURL
 
@@ -106,7 +107,7 @@ def exportFav(favdb):
       name=re.sub('.*__', '', kk)
       fk=f'file:{artist}__{name}'
       url=favdb[k]
-      if fk in favdb: url=fn2googleStorageURL(favdb[fk], favdb[k])      
+      if fk in favdb: url=fn2googleStorageURL(favdb[fk], favdb[k])
       rsleep(3)
       cover=favdb[f'pic:{kk}']
       with open(f"songs.txt", 'a') as f:
