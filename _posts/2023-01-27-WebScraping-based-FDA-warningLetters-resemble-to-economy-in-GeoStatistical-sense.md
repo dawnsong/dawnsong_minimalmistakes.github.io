@@ -11,10 +11,12 @@ tags:
 ---
 
 It is interesting to gather/download the [FDA warning letters][fda-warning] and overlay the number per state as shown below: ![fda-warning-us](/images/states_nFDAWarningLetters2017--2022.png "FDA warning letters number count for states"). 
-From this overlay, I saw the resemblance with the enconomy of the states shown below: ![us-economy](/images/640px-GDP_by_U.S._state_2023.png "US Enconomy 2023").
+From this overlay, I saw the resemblance with the [enconomy of the states][states-economy] shown below: ![us-economy](/images/640px-GDP_by_U.S._state_2023.png "US Enconomy 2023").
 Especially, the top 4 states are CA, TX, FL and NY.
 
 With this resemblance in mind, I am wondering I maybe able to predict the number of warning letters from the states' nominal GDP :)
+
+I may need download the economical data to draw with same colorbar to ease the comparison :)
 
 <!-- 
 You'll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -38,3 +40,4 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-talk]: https://talk.jekyllrb.com/ 
 -->
 [fda-warning]: https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/compliance-actions-and-activities/warning-letters
+[states-economy]: https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_GDP

@@ -38,7 +38,7 @@ g { color: Green }
   - <details><summary>DME referral provider-based machine learning</summary> focuses on exploring the referral doctors features among the tri-party (billing/rendering doctors, referral doctors and patients). This model is still under active development and pending with more model methods comparison to achieve better detection on FWA (fraud, waste, and abuse).</details>
   - <details><summary>Web-scraping</summary>
 
-    - on FDA, FTC warning letters, especially using ChatGPT to digest the FTC PDF-based warning letters to extract meaningful leads information.<br/>
+    - on [FDA][fda-warning], FTC warning letters, especially using ChatGPT to digest the FTC PDF-based warning letters to extract meaningful leads information.<br/>
     - on npidb etc. patients' reviews website to find out bad reviews on prescribers.<br/>
     - on ups.com, fedex.com to find out all their store addresses such that finding false mail P.O. box that may lead to fraud behaviors.
 
@@ -105,3 +105,5 @@ g { color: Green }
 10. Jordi Bonaventura, Matthew A Boehm, Hank P Jedema, Oscar Solis, Marco Pignatelli, **<o>Xiaowei Song</o>**, Hanbing Lu, Christopher T Richie, Shiliang Zhang, Juan L Gomez, Sherry Lam, Marisela Morales, Omar A Gharbawie, Martin G Pomper, Elliot A Stein, Charles W Bradberry, Michael Michaelides*. (2023) Expression of the excitatory opsin ChRERα can be traced longitudinally in rat and nonhuman primate brains with PET imaging. <r>Science translational medicine</r>, 15, 706.
 
     - a. I verified the PET findings with a new set of squirrel monkeys’ resting-state fMRI datasets and showed the promising overlap between fMRI imaging and PET imaging.
+
+[fda-warning]: /blog/WebScraping-based-FDA-warningLetters-resemble-to-economy-in-GeoStatistical-sense/
