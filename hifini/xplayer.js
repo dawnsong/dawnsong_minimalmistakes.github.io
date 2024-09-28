@@ -1142,6 +1142,17 @@ function getRandomSubarray(arr, size) {
   }
   return shuffled.slice(min);
 }
+// function moveDivToUl() {
+//   // const newLi = document.createElement("li");
+//   // // Move the div inside the new li
+//   // newLi.appendChild($("#xplayer"));
+//   // Add the li to the ul
+//   $("div.page__footer-follow > ul.social-icons > li:last-child").appendChild($("#xplayer"));
+//   // $("div.page__footer-follow > ul.social-icons > li:last-child").color='red';
+//   // $("ul.social-icons > li:nth-child(3)").appendChild($("#xplayer"));
+//   //to debug
+// }
+// moveDivToUl();
 var ap = new APlayer({
   element: document.getElementById('xplayer'),
   narrow: false,
