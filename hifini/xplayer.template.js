@@ -18,6 +18,22 @@ function getRandomSubarray(arr, size) {
   }
   return shuffled.slice(min);
 }
+function moveDivToUl() {
+  // const newLi = document.createElement("li");
+  // // Move the div inside the new li
+  // newLi.appendChild($("#xplayer"));
+  // Add the li to the ul
+  // $("div.page__footer-follow > ul.social-icons > li:last-child").appendChild($("#xplayer"));
+  // var li=$("div.page__footer-follow > ul.social-icons > li:nth-child(1)");
+  //this selection only works after I have put xplayer div behind all the ul > li in footer.html instead of footer/custom.html
+  var li=$("div.page__footer-follow > ul.social-icons > li:nth-child(1)");
+  li.css('color','red');
+  console.log(li.text());
+  // console.log(li.parent().text());
+  // $("ul.social-icons > li:nth-child(3)").appendChild($("#xplayer"));
+  //to debug
+}
+// moveDivToUl();
 var ap = new APlayer({
   element: document.getElementById('xplayer'),
   narrow: false,
