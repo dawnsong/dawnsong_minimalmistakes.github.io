@@ -1131,6 +1131,156 @@ name: '疯狂的外星人' ,
 artist: '黄渤-梁龙-沈腾' ,
 url: 'https://hifini.com/https://m.hifini.com/music/000PCeih0yNlV9.m4a' ,
 cover: 'https://p2.music.126.net/BeuZdndGdvwLewochKK0aA==/109951163873626650.jpg?param=130y130'  ,
+},{
+name: '护花使者' ,
+artist: '李克勤' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400000WblbK2H7s6i.m4a?guid=774876&vkey=C2F0335A3CFDC508A243E5B506284A76EFB7EF422C71F8A534B62B9D71BEA04DA4D1465C0093739DE7BBB95F5E120A26D656E218D81611E0&uin=3935802489&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001qjxAG2mEJ1o.jpg'  ,
+},{
+name: '月半小夜曲 (Album Version)' ,
+artist: '李克勤' ,
+url: 'https://v.baiyuechenlun.com/00cdurD2fY83O1.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001Vdkw84cPdmT.jpg'  ,
+},{
+name: '红日' ,
+artist: '李克勤' ,
+url: 'http://m804.music.126.net/20240930000438/fb926cb0e4fa27e73e5da526bc622636/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/28481821032/ec0c/1d63/0bfc/e0fc8d52922a908883b93814d573ab9b.mp3' ,
+cover: 'https://p2.music.126.net/ZJvsIcd51VAZx3-YuEAcFQ==/18612532836965764.jpg?param=130y130'  ,
+},{
+name: '一生不变' ,
+artist: '李克勤' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400003QniQd4OPYDy.m4a?guid=4012105&vkey=1492CE2B4F194F7766E33F98E0BFCD51B8B3DE142D1383FBC2F82618B99C821717DC5D67A16A3251CBC77F2958A5A0A59D7CFEF2A8351EEF&uin=3961673309&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003pPeOQ48w3QO.jpg'  ,
+},{
+name: '跟往事干杯' ,
+artist: '姜育恒' ,
+url: 'https://m.hifini.com/music/姜育恒 - 跟往事干杯.m4a' ,
+cover: 'https://p1.music.126.net/5FnEQbnRS7fy0Urf_3prSg==/109951165628232698.jpg?param=130y130'  ,
+},{
+name: '别让我一个人醉' ,
+artist: '姜育恒' ,
+url: 'https://m.hifini.com/music/姜育恒 - 别让我一个人醉.m4a' ,
+cover: 'https://p2.music.126.net/E9DzOtNsXUAYtGuvOCHJMw==/109951165628229603.jpg?param=130y130'  ,
+},{
+name: '驿动的心' ,
+artist: '姜育恒' ,
+url: 'https://m.hifini.com/music/姜育恒 - 驿动的心.m4a' ,
+cover: 'https://p2.music.126.net/wCJd5jB-xvwcJLuFmV-vRw==/109951167184757854.jpg?param=130y130'  ,
+},{
+name: '大雨' ,
+artist: '李克勤' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400000iLdub21n6LB.m4a?guid=4030579&vkey=ED8B1A7234830D8A8BC414A194892A4DA9705BD656FFC58A081F78D57344F5320EC1B2A1BD66909FFDD17B844D54B19AB3546A69A6000B00&uin=&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000l0hFh0S8eGH.jpg'  ,
+},{
+name: '多年以后' ,
+artist: '姜育恒' ,
+url: 'https://m.hifini.com/music/姜育恒 - 多年以后.m4a' ,
+cover: 'https://p1.music.126.net/i699cJm0l8PvNP_WLp2Vag==/109951167188040462.jpg?param=130y130'  ,
+},{
+name: '再回首' ,
+artist: '姜育恒' ,
+url: 'https://m.hifini.com/music/姜育恒 - 再回首.m4a' ,
+cover: 'https://p2.music.126.net/i699cJm0l8PvNP_WLp2Vag==/109951167188040462.jpg?param=130y130'  ,
+},{
+name: '戒烟如你' ,
+artist: '姜育恒' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400001Loa8F1Gt5Rf.m4a?guid=955772&vkey=2A85D783A71B5A4EFFDE43CCBF63BF01B0E2F5BEAAB60B24D2B20102E941B8FF1567F5F021D87A2F0FDE6A818D8BB3C3E3BC79FA54EBDDF5&uin=&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002c11XE04urxc.jpg'  ,
+},{
+name: '梅花三弄' ,
+artist: '姜育恒' ,
+url: 'https://m.hifini.com/music/姜育恒 - 梅花三弄.m4a' ,
+cover: 'https://p2.music.126.net/E9DzOtNsXUAYtGuvOCHJMw==/109951165628229603.jpg?param=130y130'  ,
+},{
+name: '其实我真的很在乎' ,
+artist: '姜育恒' ,
+url: 'https://v.baiyuechenlun.com/00jwYMz4YWgw91.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000fRfjq4QT604.jpg'  ,
+},{
+name: '落花' ,
+artist: '周深' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400002qphbH2AtueD.m4a?guid=23123563&vkey=150FA2C45D8674E16F78843A5F80A7C4D146F20A4D90FEF994E96E1C991CEAD51B08A148D8A46CC628FCE837EF71E2B8802DB8D8362734A3&uin=3935802489&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003kO7Gb2E5HQu.jpg'  ,
+},{
+name: '大鱼' ,
+artist: '周深' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400003ae8GI3mQimV.m4a?guid=74239873&vkey=25F420B610E3D2A81D2A3AC3EDFD33B413A32262536DB110041043525A7E78A009562CF58FCEE4EB34BBA32343484D1DB21219090FD4E6F6&uin=3894766636&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004Y7V4s3ug4cC.jpg'  ,
+},{
+name: '蓝色降落伞' ,
+artist: '周深' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400000EW2723ELPXH.m4a?guid=5840510&vkey=F0CC6BF5B33E8389A9E2E4ACD83B25B133D8CEFEA403AA5FCCA9DA0BC5AD99D71122CB4F0F663978A34404D8F1201F5A6A9CC0DF7696960C&uin=3961673309&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000GJWeQ1Sx0Is.jpg'  ,
+},{
+name: '随风' ,
+artist: '周深' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400000rrSdA2N27mG.m4a?guid=47384828&vkey=11B621602F7FFAE9F46923E94E6B8F60EA5CBE31B29E70CB5E8F0422A53574AAEA64336BA572CD865DA8337BD0BA9929F282A1F5EB447885&uin=&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001lnAOG218v97.jpg'  ,
+},{
+name: '屁' ,
+artist: '者来女' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400003nOlBr1LAT8e.m4a?guid=4294033&vkey=057C7B0D75D7DFF0A8BBA163090A46AD861499C771A0E8B28B0F5F126E89A1BADB0933239758A4C31A05D169F47D83FFD48FAE7DEF2C6F8C&uin=&fromtag=103032&src=C400003LzVd33OEa2U.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004B5xJQ0GOPPI.jpg'  ,
+},{
+name: '笑傲江湖' ,
+artist: '刘欢-王菲' ,
+url: 'https://m.hifini.com/music/yqq/0014nHTQ0CMtRm.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002gfbPb17oXnN.jpg'  ,
+},{
+name: '红豆' ,
+artist: '王菲' ,
+url: 'http://ws.stream.qqmusic.qq.com/C4000028rDWH1IeNPU.m4a?guid=120739969&vkey=31B39A1EF65C464A24D511C7C1320481FCE466F332FD7DEAB6661C3903F686F9BFB85DFBFC2CCA607EF60CC532C629CB401D540D8795287E&uin=95272751&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002ZDDGB1v5cEx.jpg'  ,
+},{
+name: '传奇' ,
+artist: '王菲' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400002yyl3B1KUpaa.m4a?guid=208163857&vkey=259E4FC3899A82296801634EC25ADFCADDB1F5A31C1AB4CE16433A2BC2B3C4DE01E1594713E6ED5668376A5DE0AA9AB19F231A06DFFA24B7&uin=3894766636&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002jYUVQ3I0XyX.jpg'  ,
+},{
+name: '秋语 (Live)' ,
+artist: '刘欢' ,
+url: 'https://m.hifini.com/music/2021/C400004JIjet0JkVyd.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002W5kGN18ymkA.jpg'  ,
+},{
+name: '带着地球去流浪' ,
+artist: '刘欢' ,
+url: 'http://ws.stream.qqmusic.qq.com/C400001Ar8Ya3b63M4.m4a?guid=516392804&vkey=0B01A429214A070E72721D0C4814E7CE731FAADF2104C23BF3B212AA8B8ED279D886ED15DB7DC41B510F830AC372BE3DC84F1982B12F1C83&uin=95272751&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000043WWKb0laukk.jpg'  ,
+},{
+name: '在路上' ,
+artist: '刘欢' ,
+url: 'https://m.hifini.com/music/刘欢 - 在路上.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000GXQ3c03amiY.jpg'  ,
+},{
+name: '容易受伤的女人' ,
+artist: '王菲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E7%8E%8B%E8%8F%B2__%E5%AE%B9%E6%98%93%E5%8F%97%E4%BC%A4%E7%9A%84%E5%A5%B3%E4%BA%BA.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003PpJPZ11T8rK.jpg'  ,
+},{
+name: '笑忘书' ,
+artist: '王菲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E7%8E%8B%E8%8F%B2__%E7%AC%91%E5%BF%98%E4%B9%A6.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000001WFLC3cqaQR.jpg'  ,
+},{
+name: '匆匆那年' ,
+artist: '王菲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E7%8E%8B%E8%8F%B2__%E5%8C%86%E5%8C%86%E9%82%A3%E5%B9%B4.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000036eU2A4VBjo2.jpg'  ,
+},{
+name: '流年' ,
+artist: '王菲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E7%8E%8B%E8%8F%B2__%E6%B5%81%E5%B9%B4.mp3' ,
+cover: 'https://p2.music.126.net/oMftvOfez0-iTRuUs1CHlA==/19178781323558220.jpg?param=130y130'  ,
+},{
+name: '因为爱情' ,
+artist: '陈奕迅' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%99%88%E5%A5%95%E8%BF%85__%E5%9B%A0%E4%B8%BA%E7%88%B1%E6%83%85.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000Iv0BM0vOHkK.jpg'  ,
+},{
+name: '人间' ,
+artist: '王菲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E7%8E%8B%E8%8F%B2__%E4%BA%BA%E9%97%B4.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000nfgwP0D6qxd.jpg'  ,
 },];
 function getRandomSubarray(arr, size) {
   var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
