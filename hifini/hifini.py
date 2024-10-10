@@ -6,7 +6,7 @@ import re
 import sys, os, subprocess, tempfile
 import requests, shutil
 import urllib.request, urllib.parse
-from pathlib import Path 
+from pathlib import Path
 from datetime import datetime, timedelta
 from dateutil import parser
 #----------------------------------------------------
@@ -16,7 +16,7 @@ with Path(f'{__file__}.LOG').open("a") as LOG:
     LOG.write(datetime.now().strftime("%Y%m%d.%H%M%S: ") + cmd + "\n")
 #----------------------------------------------------
 
-import pandas as pd 
+import pandas as pd
 # import pyap #parse cleaned addresses from string/text
 
 #----------------------------------------------------
@@ -31,10 +31,10 @@ import numpy as np
 import tqdm
 import math
 import joblib
-from random import randint, random 
+from random import randint, random
 import time #use its sleep
 import string , json
-from requests import head, options 
+from requests import head, options
 
 from configobj import ConfigObj
 
@@ -42,7 +42,7 @@ from configobj import ConfigObj
 # initialize selenium4
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
@@ -61,7 +61,7 @@ logger.info('-'*16 + datetime.now().strftime("%Y%m%d.%H%M%S") + '-'*16)
 # import configparser
 config = ConfigObj('config.ini') #(default_config_files=['config.ini', '.config.ini'])
 # def parseArgs(fini='config.ini'):
-#   global config 
+#   global config
 #   config._load(fini)
 #   return config
 
@@ -127,26 +127,26 @@ cover: '{cover}'  ,
           if '//%musicDictList' in line:
             for sl in songs: ft.write(sl)
           else: ft.write(line)
-    
+
 #----------------------------------------------------------------------------
 def getFavSongs(url, favdb={}):
-  sbd=sb.driver  
+  sbd=sb.driver
   sbd.uc_open_with_tab(url)
-  
-  favPage={}  
+
+  favPage={}
   sbd.wait_for_element_present("div.subject", timeout=10)
   songs=sbd.find_elements(By.XPATH, '//div[@class="subject"]/a[2]') #counting from 1, not 0!
   hrefs=[None]*len(songs)
   #gather all links for this page
-  for i in range(len(songs)): 
+  for i in range(len(songs)):
     print(songs[i].text)
     songName=re.sub(r"\[.*", r"", songs[i].text).strip()
-    href = songs[i].get_attribute('href') 
+    href = songs[i].get_attribute('href')
     favPage[f'hifini:{songName}']=href
     hrefs[i] = f'hifini:{songName}'
   print(hrefs)
-  for i in range(len(hrefs)): 
-    songName=re.sub(r'hifini:', '', hrefs[i])    
+  for i in range(len(hrefs)):
+    songName=re.sub(r'hifini:', '', hrefs[i])
     name  =re.sub(r'.*《([^》]*)》', r'\1', songName).strip()
     artist=re.sub(r'《.*》', '', songName).strip().replace('/', '-').replace('\\', '-')
     # even qq music URL has time limit!
@@ -159,7 +159,7 @@ def getFavSongs(url, favdb={}):
     if fk in favdb and Path(f'songs/{favdb[fk]}').exists():
       logging.info(f"{fk} | songs/{favdb[fk]} already downloaded")
       continue
-    
+
     href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
     # rsleep(3)
@@ -184,8 +184,8 @@ def getFavSongs(url, favdb={}):
     # qUrl=sbd.current_url
     r=requests.head(mUrl, allow_redirects=True, stream=False) #only metadata, not to download
     qUrl=None
-    if r.status_code == 200: 
-      logging.info(f"header: {r} , mUrl: {mUrl}")      
+    if r.status_code == 200:
+      logging.info(f"header: {r} , mUrl: {mUrl}")
       qUrl=r.url
       favPage[f'url:{author}__{title}']=qUrl
       #save mp3 to local
@@ -197,7 +197,7 @@ def getFavSongs(url, favdb={}):
         ext=''
         logging.error(f"qURL={qUrl} |no extension Error|: {e}")
       fn=f"songs/{author}__{title}.{ext}"
-      favPage[f'file:{author}__{title}']=Path(fn).name #only basename      
+      favPage[f'file:{author}__{title}']=Path(fn).name #only basename
       if not Path(fn).exists():
         logging.info(f"Downloading song {fn} from {qUrl}")
         with requests.get(qUrl, allow_redirects=True, stream=True) as r:
@@ -205,34 +205,46 @@ def getFavSongs(url, favdb={}):
               shutil.copyfileobj(r.raw, f)
       else:
         logging.info(f"SONG file {fn} already exists, ignore downloading")
-    print(qUrl)    
+    print(qUrl)
     print(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
     # break
   return favPage
 
-def getFavList(favdb={}):  
+def getFavList(favdb={}):
   sbd=sb.driver
   # sbd.switch_to.window(win0)
   sbd.uc_open_with_tab('https://hifini.com/my-favorites-1.htm?orderby=desc')
   nfavH=sbd.find_elements(By.XPATH, "//ul[@class='nav nav-tabs card-header-tabs']")[0]
-  print(nfavH.text)  
+  print(nfavH.text)
   nfav=int(re.sub(r".*\(([0-9]*)\)", r"\1", nfavH.text))
   # print(nfav)
   npage=int(np.ceil(nfav/10))
   print(f"npage= {npage}")
-  
-  for i in range(1, npage+1):  
-    # sbd.switch_to_window(win1)    
+
+  for i in range(1, npage+1):
+    # sbd.switch_to_window(win1)
     psongs=getFavSongs(f'https://hifini.com/my-favorites-{i}.htm?orderby=asc', favdb)
     print(psongs)
     favdb.update(psongs)
     # print(favdb)
     rsleep(5)
     # break
-  
+
   return favdb
 #----------------------------------------------------------------------------
+
+def sign4prize():
+  sbd=sb.driver
+  sbd.uc_open_with_tab('https://hifini.com/')
+  signBtn  =sbd.find_element(By.XPATH, '//div[@id="sign"]')
+  signPanel=sbd.find_element(By.XPATH, '//span[@id="sg_sign"]')
+  print(signPanel.text)
+  if "已签"!=signBtn.text: signBtn.click()
+  rsleep(minSeconds=30)
+  signPanel=sbd.find_element(By.XPATH, '//span[@id="sg_sign"]')
+  print(signPanel.text)
+
 
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 def debugModules():
@@ -243,40 +255,40 @@ def debugModules():
       # logger.exception(e)
       logger.warning(f'Imported module "{m}" does not have __version__')
 
-def getSeliumBase(fini='browser.ini'):  
+def getSeliumBase(fini='browser.ini'):
   cfg=ConfigObj(fini)
   chrome=cfg['chrome']
   args=chrome['arguments']
   if 'proxy-server' in args: args['chromium-arg'] = f"{args['chromium-arg']} , --proxy-server={args['proxy-server']}"
   return SB(test=True,  uc_cdp=True, binary_location=chrome['chromePath'], user_data_dir=args['user-data-dir'], incognito=False, chromium_arg=args['chromium-arg']) #, proxy='5.161.74.235:8215')
-      
+
 def main():
   # debugModules()
-  global OVERWRITE, config, sb, driver   
+  global OVERWRITE, config, sb, driver
   # parseArgs('config.ini')
   for k in config['default']:
     logger.info(f"{k}= {config['default'][k]}")
   OVERWRITE=int(config['default']['Overwrite'])
-  
-  tday = datetime.today()  
+
+  tday = datetime.today()
   op='fav' #sign
   if len(sys.argv)>1: op=sys.argv[1]
   fzdb=f'hifini.z'
   if len(sys.argv)>2: fzdb=sys.argv[2]
   favdb={}
   if Path(fzdb).exists(): [favdb] = joblib.load(fzdb)
-    
-    
+
+
   #starting URL with parameters selected for many sub-types
-  # sURL='https://oig.hhs.gov/fraud/enforcement/?type=covid-19&type=criminal-and-civil-actions&type=fraud-self-disclosures&type=grant-and-contractor-fraud-self-disclosures&type=state-enforcement-agencies#results'  
-  # sURL='https://oig.hhs.gov/fraud/enforcement/?type=covid-19&type=criminal-and-civil-actions'  
+  # sURL='https://oig.hhs.gov/fraud/enforcement/?type=covid-19&type=criminal-and-civil-actions&type=fraud-self-disclosures&type=grant-and-contractor-fraud-self-disclosures&type=state-enforcement-agencies#results'
+  # sURL='https://oig.hhs.gov/fraud/enforcement/?type=covid-19&type=criminal-and-civil-actions'
   sURL='https://hifini.com/'
-  if 'OVERWRITE' in os.environ: OVERWRITE=int(os.environ['OVERWRITE']) #overwrite global var 
-    
+  if 'OVERWRITE' in os.environ: OVERWRITE=int(os.environ['OVERWRITE']) #overwrite global var
+
   #run-----------------------------
-  scraped=0 
-  with getSeliumBase(fini='browser.ini') as sb: #  
-    driver=sb.driver    
+  scraped=0
+  with getSeliumBase(fini='browser.ini') as sb: #
+    driver=sb.driver
     #create 2 windows, one for news list, another one for content from justice.org
     driver.get(sURL)
     logger.info(f'current window: {driver.current_window_handle} and its type: {type(driver.current_window_handle)}')
@@ -284,16 +296,19 @@ def main():
     # driver.switch_to.new_window('window')
     # win1=driver.current_window_handle
     # driver.switch_to.window(driver.window_handles[1])
-    try:
-      if op=='fav': #download my favorite songs' URLs
-        favdb = getFavList(favdb)
-      elif op=='sign': #sign to get 1 gold coin each day
-        pass
-      else:
+    match op:
+      case 'fav':
+        try:
+          favdb = getFavList(favdb)
+        finally:
+          joblib.dump([favdb], fzdb) #save after parsing each NPI
+          exportFav(favdb)
+      case 'sign':
+        sign4prize()
+      case _:
         logger.info('Unknown operation, fav/sign supported')
         return
-    finally:  
-      joblib.dump([favdb], fzdb) #save after parsing each NPI
-      exportFav(favdb)
+
+
 if __name__ == "__main__": main()
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
