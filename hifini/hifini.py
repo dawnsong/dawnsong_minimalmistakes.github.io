@@ -106,20 +106,23 @@ def exportFav(favdb):
     kk=k.replace('url:','')
     artist =re.sub('__.*', '', kk)
     name=re.sub('.*__', '', kk)
+    #-------------------------------------------------
     fk=f'file:{artist}__{name}'
     gk=f'isGoogleStored:{artist}__{name}'
     gURL=f'GoogleStoredURL:{artist}__{name}'
-    url=favdb[k]
+    url=favdb[k]    
     if fk in favdb: 
       if not ( gk in favdb and favdb[gk] ): #only check if I have not checked with my google storage
         url, favdb[gk]=fn2googleStorageURL(favdb[fk], favdb[k])
+        rsleep(3)
         if favdb[gk]: favdb[gURL]=url
       if gk in favdb and favdb[gk]: 
         url = favdb[gURL]
-        logging.info(f"use url: {url}")
+        logging.info(f"use Google Storage url: {url}")
     else:
       logging.warning(f"{fk} not found in favdb")
-    rsleep(3)
+    logging.info(f"Use cached URL: {url}")
+    #-------------------------------------------------
     cover=favdb[f'pic:{kk}']
     with open(f"songs.txt", 'a') as f:
       f.write(f"""{{
@@ -168,10 +171,13 @@ def getFavSongs(url, favdb={}):
     logging.info(f"Checking if {artist}__{name} already has song downloaded")
     fk=f'file:{artist}__{name}'
     # dl=f'downloaded:{artist}__{name}' #make extra link in case the listed artist/song name does not match real song/artist name within the linked detail song page
-    if fk in favdb and Path(f'songs/{favdb[fk]}').exists():
+    if fk in favdb and Path(f'songs/{favdb[fk]}').is_dir(): favdb.pop(fk, None)
+    if fk in favdb and Path(f'songs/{favdb[fk]}').is_file() and Path(f'songs/{favdb[fk]}').exists():
       logging.info(f"{fk} | songs/{favdb[fk]} already downloaded")
        #mark downloaded solving historical flags due to the difference between fav list and real song name/artist in detailed song page
-      continue    
+      continue
+    
+    logging.info(f"NEW {fk}")
 
     href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
