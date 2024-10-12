@@ -28,7 +28,7 @@ import pandas as pd
 #----------------------------------------------------
 
 import numpy as np
-import tqdm
+from tqdm import tqdm
 import math
 import joblib
 from random import randint, random
@@ -94,24 +94,25 @@ def fn2googleStorageURL(fn, qURL):
   if h.status_code==200 and 'audio' in h.headers['Content-Type'].lower():
     logging.info(f"Found audio {fn} in {gurl}")
     return q
-  else: return qURL
+  else: 
+    logging.info(f"NO audio {fn} in Google Storage yet: {h.status_code}/{h.headers['Content-Type']}, use original music URL {qURL} instead")
+    return qURL
 
 
 def exportFav(favdb):
   with open(f"songs.txt", 'w') as f: f.write("")
-  for k in favdb.keys():
-    if re.match(r'url:', k):
-      logging.info(f"exporting {k}: {favdb[k]}")
-      kk=k.replace('url:','')
-      artist =re.sub('__.*', '', kk)
-      name=re.sub('.*__', '', kk)
-      fk=f'file:{artist}__{name}'
-      url=favdb[k]
-      if fk in favdb: url=fn2googleStorageURL(favdb[fk], favdb[k])
-      rsleep(3)
-      cover=favdb[f'pic:{kk}']
-      with open(f"songs.txt", 'a') as f:
-        f.write(f"""{{
+  for k in tqdm([ky for ky in favdb.keys() if re.match(r'url:', ky)]):
+    logging.info(f"exporting {k}: {favdb[k]}")
+    kk=k.replace('url:','')
+    artist =re.sub('__.*', '', kk)
+    name=re.sub('.*__', '', kk)
+    fk=f'file:{artist}__{name}'
+    url=favdb[k]
+    if fk in favdb: url=fn2googleStorageURL(favdb[fk], favdb[k])
+    rsleep(3)
+    cover=favdb[f'pic:{kk}']
+    with open(f"songs.txt", 'a') as f:
+      f.write(f"""{{
 name: '{name}' ,
 artist: '{artist}' ,
 url: '{url}' ,
@@ -156,9 +157,11 @@ def getFavSongs(url, favdb={}):
     #   continue
     logging.info(f"Checking if {artist}__{name} already has song downloaded")
     fk=f'file:{artist}__{name}'
+    # dl=f'downloaded:{artist}__{name}' #make extra link in case the listed artist/song name does not match real song/artist name within the linked detail song page
     if fk in favdb and Path(f'songs/{favdb[fk]}').exists():
       logging.info(f"{fk} | songs/{favdb[fk]} already downloaded")
-      continue
+       #mark downloaded solving historical flags due to the difference between fav list and real song name/artist in detailed song page
+      continue    
 
     href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
@@ -202,9 +205,12 @@ def getFavSongs(url, favdb={}):
         logging.info(f"Downloading song {fn} from {qUrl}")
         with requests.get(qUrl, allow_redirects=True, stream=True) as r:
           with open(fn, 'wb') as f:
-              shutil.copyfileobj(r.raw, f)
+              shutil.copyfileobj(r.raw, f)        
       else:
         logging.info(f"SONG file {fn} already exists, ignore downloading")
+      if Path(fn).exists():
+        favdb[fk]=Path(fn).name #update link from fav list to real downloaded music filename        
+        logging.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
     print(qUrl)
     print(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
@@ -214,19 +220,22 @@ def getFavSongs(url, favdb={}):
 def getFavList(favdb={}):
   sbd=sb.driver
   # sbd.switch_to.window(win0)
-  sbd.uc_open_with_tab('https://hifini.com/my-favorites-1.htm?orderby=desc')
+  sbd.uc_open_with_tab('https://hifini.com/my-favorites-1.htm?orderby=desc') #desc is putting latter added fav song first, unlike asc
   nfavH=sbd.find_elements(By.XPATH, "//ul[@class='nav nav-tabs card-header-tabs']")[0]
   print(nfavH.text)
   nfav=int(re.sub(r".*\(([0-9]*)\)", r"\1", nfavH.text))
   # print(nfav)
   npage=int(np.ceil(nfav/10))
   print(f"npage= {npage}")
-
-  for i in range(1, npage+1):
+  
+  for i in tqdm(range(1, npage+1)):
     # sbd.switch_to_window(win1)
-    psongs=getFavSongs(f'https://hifini.com/my-favorites-{i}.htm?orderby=asc', favdb)
-    print(psongs)
-    favdb.update(psongs)
+    try:
+      psongs=getFavSongs(f'https://hifini.com/my-favorites-{i}.htm?orderby=desc', favdb)
+      print(psongs)
+      favdb.update(psongs)
+    except Exception as e:
+      logging.error(e)
     # print(favdb)
     rsleep(5)
     # break
