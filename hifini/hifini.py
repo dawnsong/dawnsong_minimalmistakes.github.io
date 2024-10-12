@@ -93,22 +93,30 @@ def fn2googleStorageURL(fn, qURL):
   logging.info(f"{fn} size: {int(h.headers['Content-Length']) /1024./1024:.1f} MB,type: {h.headers['Content-Type']}")
   if h.status_code==200 and 'audio' in h.headers['Content-Type'].lower():
     logging.info(f"Found audio {fn} in {gurl}")
-    return q
+    return q, True
   else: 
     logging.info(f"NO audio {fn} in Google Storage yet: {h.status_code}/{h.headers['Content-Type']}, use original music URL {qURL} instead")
-    return qURL
+    return qURL, False
 
 
 def exportFav(favdb):
   with open(f"songs.txt", 'w') as f: f.write("")
-  for k in tqdm([ky for ky in favdb.keys() if re.match(r'url:', ky)]):
+  for k in tqdm([ku for ku in favdb.keys() if re.match(r'url:', ku)]):
     logging.info(f"exporting {k}: {favdb[k]}")
     kk=k.replace('url:','')
     artist =re.sub('__.*', '', kk)
     name=re.sub('.*__', '', kk)
     fk=f'file:{artist}__{name}'
+    gk=f'isGoogleStored:{artist}__{name}'
+    gURL=f'GoogleStoredURL:{artist}__{name}'
     url=favdb[k]
-    if fk in favdb: url=fn2googleStorageURL(favdb[fk], favdb[k])
+    if fk in favdb: 
+      if not ( gk in favdb and favdb[gk] ): #only check if I have not checked with my google storage
+        url, favdb[gk]=fn2googleStorageURL(favdb[fk], favdb[k])
+        if favdb[gk]: favdb[gURL]=url
+      if gk in favdb and favdb[gk]: url = favdb[gURL]
+    else:
+      logging.warning(f"{fk} not found in favdb")
     rsleep(3)
     cover=favdb[f'pic:{kk}']
     with open(f"songs.txt", 'a') as f:
