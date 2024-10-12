@@ -204,9 +204,7 @@ def getFavSongs(url, favdb={}):
     hifiniHeaders={"accept": "*/*",
 "priority": "i",
 "range": "bytes=0-",
-"sec-ch-ua": "\"Google Chrome\";v=\"129\", \"Not=A?Brand\";v=\"8\", \"Chromium\";v=\"129\"",
 "sec-ch-ua-mobile": "?0",
-"sec-ch-ua-platform": "\"Windows\"",
 "sec-fetch-dest": "audio",
 "sec-fetch-mode": "no-cors",
 "sec-fetch-site": "same-site",
@@ -339,6 +337,7 @@ def main():
         finally:
           joblib.dump([favdb], fzdb) #save after parsing each NPI
           exportFav(favdb)
+          joblib.dump([favdb], fzdb) #save cached google storaged URLs
       case 'sign':
         sign4prize()
       case _:
