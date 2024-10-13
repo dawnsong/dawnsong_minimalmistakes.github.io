@@ -214,7 +214,7 @@ cover: 'https://p2.music.126.net/S92wHxkuTq7L3yeR0Vpyiw==/80264348845273.jpg?par
 },{
 name: '爱的代价' ,
 artist: '李宗盛' ,
-url: 'https://hifini.com/https://m.hifini.com/music/002RndLi3ubspW.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9D%8E%E5%AE%97%E7%9B%9B__%E7%88%B1%E7%9A%84%E4%BB%A3%E4%BB%B7.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000q3lXx3ee9fa.jpg'  ,
 },{
 name: '月亮之上' ,
@@ -334,7 +334,7 @@ cover: 'https://p2.music.126.net/5AVy-LvitnbT_nYgVG4jeA==/81363860456107.jpg?par
 },{
 name: '擦肩而过' ,
 artist: '韩红' ,
-url: 'https://hifini.com/https://od.lk/s/MzVfMzg4NDczNTVf/%E9%9F%A9%E7%BA%A2%20-%20%E6%93%A6%E8%82%A9%E8%80%8C%E8%BF%87.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%9F%A9%E7%BA%A2__%E6%93%A6%E8%82%A9%E8%80%8C%E8%BF%87.mp3' ,
 cover: 'upload/avatar/000/769413.png?1702528934'  ,
 },{
 name: '知否知否' ,
@@ -484,7 +484,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001smOHo1z7alH.jpg'  
 },{
 name: '三生缘' ,
 artist: '程响' ,
-url: 'https://hifini.com/https://m.hifini.com/music/程响 - 三生缘.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E7%A8%8B%E5%93%8D__%E4%B8%89%E7%94%9F%E7%BC%98.m4a' ,
 cover: 'https://img4.kuwo.cn/star/albumcover/500/98/31/3389133156.jpg'  ,
 },{
 name: '出卖我' ,
@@ -634,7 +634,7 @@ cover: 'https://p2.music.126.net/Hp7aEFznpTv-ECxAfaPRgg==/40681930243424.jpg?par
 },{
 name: '从头再来' ,
 artist: '刘欢' ,
-url: 'https://hifini.com/https://m.hifini.com/music/刘欢 - 从头再来.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%88%98%E6%AC%A2__%E4%BB%8E%E5%A4%B4%E5%86%8D%E6%9D%A5.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001gcDxk3ufHWh.jpg'  ,
 },{
 name: '人间半途' ,
@@ -1119,17 +1119,17 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004foB5k06VhmN.jpg'  
 },{
 name: '真心英雄' ,
 artist: '成龙-周华健-黄耀明-李宗盛' ,
-url: 'https://hifini.com/https://m.hifini.com/music/真心英雄.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%88%90%E9%BE%99-%E5%91%A8%E5%8D%8E%E5%81%A5-%E9%BB%84%E8%80%80%E6%98%8E-%E6%9D%8E%E5%AE%97%E7%9B%9B__%E7%9C%9F%E5%BF%83%E8%8B%B1%E9%9B%84.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001CM7JS0PyvUJ.jpg'  ,
 },{
 name: '天下无敌' ,
 artist: '郁可唯-张哲瀚' ,
-url: 'https://hifini.com/https://m.hifini.com/music/C400002BqIgA3zBpJ8.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%83%81%E5%8F%AF%E5%94%AF-%E5%BC%A0%E5%93%B2%E7%80%9A__%E5%A4%A9%E4%B8%8B%E6%97%A0%E6%95%8C.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000009Oj3y0eJsiT.jpg'  ,
 },{
 name: '疯狂的外星人' ,
 artist: '黄渤-梁龙-沈腾' ,
-url: 'https://hifini.com/https://m.hifini.com/music/000PCeih0yNlV9.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E6%B8%A4-%E6%A2%81%E9%BE%99-%E6%B2%88%E8%85%BE__%E7%96%AF%E7%8B%82%E7%9A%84%E5%A4%96%E6%98%9F%E4%BA%BA.m4a' ,
 cover: 'https://p2.music.126.net/BeuZdndGdvwLewochKK0aA==/109951163873626650.jpg?param=130y130'  ,
 },{
 name: '护花使者' ,
@@ -1154,17 +1154,17 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003pPeOQ48w3QO.jpg'  
 },{
 name: '跟往事干杯' ,
 artist: '姜育恒' ,
-url: 'https://m.hifini.com/music/姜育恒 - 跟往事干杯.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A7%9C%E8%82%B2%E6%81%92__%E8%B7%9F%E5%BE%80%E4%BA%8B%E5%B9%B2%E6%9D%AF.m4a' ,
 cover: 'https://p1.music.126.net/5FnEQbnRS7fy0Urf_3prSg==/109951165628232698.jpg?param=130y130'  ,
 },{
 name: '别让我一个人醉' ,
 artist: '姜育恒' ,
-url: 'https://m.hifini.com/music/姜育恒 - 别让我一个人醉.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A7%9C%E8%82%B2%E6%81%92__%E5%88%AB%E8%AE%A9%E6%88%91%E4%B8%80%E4%B8%AA%E4%BA%BA%E9%86%89.m4a' ,
 cover: 'https://p2.music.126.net/E9DzOtNsXUAYtGuvOCHJMw==/109951165628229603.jpg?param=130y130'  ,
 },{
 name: '驿动的心' ,
 artist: '姜育恒' ,
-url: 'https://m.hifini.com/music/姜育恒 - 驿动的心.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A7%9C%E8%82%B2%E6%81%92__%E9%A9%BF%E5%8A%A8%E7%9A%84%E5%BF%83.m4a' ,
 cover: 'https://p2.music.126.net/wCJd5jB-xvwcJLuFmV-vRw==/109951167184757854.jpg?param=130y130'  ,
 },{
 name: '大雨' ,
@@ -1174,12 +1174,12 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000l0hFh0S8eGH.jpg'  
 },{
 name: '多年以后' ,
 artist: '姜育恒' ,
-url: 'https://m.hifini.com/music/姜育恒 - 多年以后.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A7%9C%E8%82%B2%E6%81%92__%E5%A4%9A%E5%B9%B4%E4%BB%A5%E5%90%8E.m4a' ,
 cover: 'https://p1.music.126.net/i699cJm0l8PvNP_WLp2Vag==/109951167188040462.jpg?param=130y130'  ,
 },{
 name: '再回首' ,
 artist: '姜育恒' ,
-url: 'https://m.hifini.com/music/姜育恒 - 再回首.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A7%9C%E8%82%B2%E6%81%92__%E5%86%8D%E5%9B%9E%E9%A6%96.m4a' ,
 cover: 'https://p2.music.126.net/i699cJm0l8PvNP_WLp2Vag==/109951167188040462.jpg?param=130y130'  ,
 },{
 name: '戒烟如你' ,
@@ -1189,7 +1189,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002c11XE04urxc.jpg'  
 },{
 name: '梅花三弄' ,
 artist: '姜育恒' ,
-url: 'https://m.hifini.com/music/姜育恒 - 梅花三弄.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A7%9C%E8%82%B2%E6%81%92__%E6%A2%85%E8%8A%B1%E4%B8%89%E5%BC%84.m4a' ,
 cover: 'https://p2.music.126.net/E9DzOtNsXUAYtGuvOCHJMw==/109951165628229603.jpg?param=130y130'  ,
 },{
 name: '其实我真的很在乎' ,
@@ -1224,7 +1224,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004B5xJQ0GOPPI.jpg'  
 },{
 name: '笑傲江湖' ,
 artist: '刘欢-王菲' ,
-url: 'https://m.hifini.com/music/yqq/0014nHTQ0CMtRm.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%88%98%E6%AC%A2-%E7%8E%8B%E8%8F%B2__%E7%AC%91%E5%82%B2%E6%B1%9F%E6%B9%96.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002gfbPb17oXnN.jpg'  ,
 },{
 name: '红豆' ,
@@ -1239,7 +1239,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002jYUVQ3I0XyX.jpg'  
 },{
 name: '秋语 (Live)' ,
 artist: '刘欢' ,
-url: 'https://m.hifini.com/music/2021/C400004JIjet0JkVyd.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%88%98%E6%AC%A2__%E7%A7%8B%E8%AF%AD%20%28Live%29.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002W5kGN18ymkA.jpg'  ,
 },{
 name: '带着地球去流浪' ,
@@ -1249,7 +1249,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000043WWKb0laukk.jpg'  
 },{
 name: '在路上' ,
 artist: '刘欢' ,
-url: 'https://m.hifini.com/music/刘欢 - 在路上.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%88%98%E6%AC%A2__%E5%9C%A8%E8%B7%AF%E4%B8%8A.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000GXQ3c03amiY.jpg'  ,
 },{
 name: '容易受伤的女人' ,
@@ -1339,7 +1339,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002TM7iM3IFT4G.jpg'  
 },{
 name: '一剪梅 (翻奏: 费玉清)' ,
 artist: '张琰' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C4000006pNkq01Nc4g.m4a?guid=803088615&vkey=89C249460A59599BBFC6613E7FDFD0660E6A99BC1355CA50D849AA66D3609764598D10DC251B11AD177E4B35B76ADECC045B903CF3D860CD&uin=&fromtag=103032' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C4000006pNkq01Nc4g.m4a?guid=5778731&vkey=A6C8872323BAB96458741232C148EF8AD96358A2C18A03013036D3EC3AA6B23B982ED3282F830C0F3E3EF50EFDFA4EEB2F30B81274920F4F&uin=&fromtag=103032' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004YwbA01Kv6Ak.jpg'  ,
 },{
 name: '可能' ,
@@ -1349,7 +1349,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003DFrnj26SMZU.jpg'  
 },{
 name: '别知己（独唱版）' ,
 artist: '海来阿木' ,
-url: 'https://m.hifini.com/music/海来阿木 - 别知己.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%B5%B7%E6%9D%A5%E9%98%BF%E6%9C%A8__%E5%88%AB%E7%9F%A5%E5%B7%B1%EF%BC%88%E7%8B%AC%E5%94%B1%E7%89%88%EF%BC%89.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004Zpj101NvOzC.jpg'  ,
 },{
 name: '都是你的错' ,
@@ -1379,12 +1379,12 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000028Pdb00tG9aA.jpg'  
 },{
 name: '关于郑州的记忆' ,
 artist: '李志' ,
-url: 'https://m.hifini.com/music/yqq/000k5dn31a2gxp.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9D%8E%E5%BF%97__%E5%85%B3%E4%BA%8E%E9%83%91%E5%B7%9E%E7%9A%84%E8%AE%B0%E5%BF%86.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003bq8OW3e0oKh.jpg'  ,
 },{
 name: '该死的温柔' ,
 artist: '马天宇' ,
-url: 'https://m.hifini.com/music/yqq/000TIBdC0xuRPc.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%A9%AC%E5%A4%A9%E5%AE%87__%E8%AF%A5%E6%AD%BB%E7%9A%84%E6%B8%A9%E6%9F%94.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000mtyRr43VBPu.jpg'  ,
 },{
 name: '化风行万里' ,
@@ -1539,7 +1539,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000OmaSG2Kyjf6.jpg'  
 },{
 name: '霸王别姬' ,
 artist: '屠洪刚' ,
-url: 'https://m.hifini.com/music/屠洪刚 - 霸王别姬.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%B1%A0%E6%B4%AA%E5%88%9A__%E9%9C%B8%E7%8E%8B%E5%88%AB%E5%A7%AC.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004N83os0hab5P.jpg'  ,
 },{
 name: '中国功夫' ,
@@ -1649,7 +1649,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000026kNIX07Wabz.jpg'  
 },{
 name: '羞答答的玫瑰静悄悄地开' ,
 artist: '孟庭苇' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400004SR2xy3arcNn.m4a?guid=67073bc1295f1&vkey=C19F520608BDEBDD31986A0C24010089D48B015C5E5E4B6D1A7724A3AE9042DF36461F3D73AA7F3C17B47150A45E54451299EE671008363D&uin=1248712158&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%AD%9F%E5%BA%AD%E8%8B%87__%E7%BE%9E%E7%AD%94%E7%AD%94%E7%9A%84%E7%8E%AB%E7%91%B0%E9%9D%99%E6%82%84%E6%82%84%E5%9C%B0%E5%BC%80.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000FB0Cz3hQoDk.jpg'  ,
 },{
 name: '谁的眼泪在飞' ,
@@ -1739,7 +1739,7 @@ cover: 'https://p1.music.126.net/UhbPif9-eNyt_ufpfBrvPw==/109951167402252837.jpg
 },{
 name: '天路' ,
 artist: '韩红' ,
-url: 'https://m.hifini.com/music/韩红 - 天路.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%9F%A9%E7%BA%A2__%E5%A4%A9%E8%B7%AF.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004g67gU2KRwfc.jpg'  ,
 },{
 name: '丁香花' ,
@@ -1754,17 +1754,17 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000QWsiG2QBlZd.jpg'  
 },{
 name: '刀剑如梦 (Live)' ,
 artist: '周华健' ,
-url: 'https://hifini.com/get_music.php?key=UOpko3Qn5Er5ory3sSjjyR6qUcKHDhp0FUxPBQu8Ee6LNH2OJsnNJbEEZNk52J9kFW4kBVr20PbdocOVR5xxHiFiNixxbBg&p=OR3BCEB6CIGRKOZZDYKCOBDULZ3VYFAYDJ7TWDZYO44CCFZIMFMU67I5A42HUGYLFYWA6LQYDBAHCAC7EQZBMMIHBISAOEASAQSEKQCOPUPDCHQGAASQMIYELJPTWSQDKBJT2MQAH4PA4AAIAAWQMDS5LJMFEBJSGYCRC72RAQPTKWAZIZZHYBQ5HMBCOORAFUSQIUI6DVNHS6S4GECC26IDGU7ACOCRBIQVA437' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400003ikwCy0bI3uL.m4a?guid=670b167d5b928&vkey=1D7DF3421D66D6FD21805208D27BE4026702079B915AA347004A347ED565481E04344B5CCF6B07851ECAE4D9D2152A325A44FF9D76EF5549&uin=3438835068&fromtag=120032' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001itDE443oApz.jpg'  ,
 },{
 name: '写给黄淮' ,
 artist: '西彬' ,
-url: 'https://m.hifini.com/music/西彬_写给黄淮.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%A5%BF%E5%BD%AC__%E5%86%99%E7%BB%99%E9%BB%84%E6%B7%AE.m4a' ,
 cover: 'https://p1.music.126.net/NeZEUwXVyNyoqacFSGWsdQ==/109951163832648101.jpg?param=130y130'  ,
 },{
 name: '盗将行' ,
 artist: '西彬' ,
-url: 'https://m.hifini.com/music/西彬_盗将行.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%A5%BF%E5%BD%AC__%E7%9B%97%E5%B0%86%E8%A1%8C.m4a' ,
 cover: 'https://p1.music.126.net/k3D9_qs0gprOKY7xDP5N1w==/109951163637846103.jpg?param=130y130'  ,
 },{
 name: '天煞孤星' ,
@@ -1824,7 +1824,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001UAON04TFKtK.jpg'  
 },{
 name: '少年壮志不言愁' ,
 artist: '刘欢' ,
-url: 'https://m.hifini.com/music/刘欢 - 少年壮志不言愁.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%88%98%E6%AC%A2__%E5%B0%91%E5%B9%B4%E5%A3%AE%E5%BF%97%E4%B8%8D%E8%A8%80%E6%84%81.m4a' ,
 cover: 'https://p2.music.126.net/2IkXxQtvOkV9PTOgqPGxTQ==/19016053602645450.jpg?param=130y130'  ,
 },{
 name: '十年' ,
@@ -2044,7 +2044,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003ra17R39uOlU.jpg'  
 },{
 name: '不必在乎我是谁' ,
 artist: '林忆莲' ,
-url: 'https://m.hifini.com/music/林忆莲 - 不必在乎我是谁.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9E%97%E5%BF%86%E8%8E%B2__%E4%B8%8D%E5%BF%85%E5%9C%A8%E4%B9%8E%E6%88%91%E6%98%AF%E8%B0%81.m4a' ,
 cover: 'https://p2.music.126.net/4U1ZESzGMLI7DGaO9y_5AQ==/109951164973485450.jpg?param=130y130'  ,
 },{
 name: '至少还有你' ,
@@ -2074,42 +2074,42 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004B5xJQ0GOPPI.jpg'  
 },{
 name: '盗将行' ,
 artist: '花粥' ,
-url: 'http://m701.music.126.net/20241010110545/4768d9bd4c60c76d5cd75841dd1a4504/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/28481669754/1ae2/f4c6/ecf0/db6df69167be303d9aa40fd67457ac2e.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%8A%B1%E7%B2%A5__%E7%9B%97%E5%B0%86%E8%A1%8C.mp3' ,
 cover: 'https://p2.music.126.net/-qHPT3rhxDlu5zQV9NcQ-A==/109951163555860423.jpg?param=130y130'  ,
 },{
 name: 'Mojito' ,
 artist: '周杰伦' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C4000031LF4C40z5V2.m4a?guid=6706ead225010&vkey=513223052DDBE1E6DE0B71D74FAF1707AB2E21B58234892344A96A54DAD3E6EC712A45EB4F9845938D5E10EBC81E0F4C576C38C03FD42419&uin=453711656&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%91%A8%E6%9D%B0%E4%BC%A6__Mojito.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000009C3rp3Kfwg0.jpg'  ,
 },{
 name: '旧欢如梦' ,
 artist: '李克勤' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400004A8vBp2kUOcW.m4a?guid=6706377407733&vkey=89E632A11678B9786F1646D11BCC5A23FED7B4FF5CC09F2B276BA98DF83244DDAE9BAA13A139DF4B9D41F24F476BE7F2DAF94D6755374693&uin=95272751&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9D%8E%E5%85%8B%E5%8B%A4__%E6%97%A7%E6%AC%A2%E5%A6%82%E6%A2%A6.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002qrvMO1PsNxC.jpg'  ,
 },{
 name: '天下有情人' ,
 artist: '周华健' ,
-url: 'http://m10.music.126.net/20241010110702/ef917a77e69c45c58f58edaf04811a3c/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/4064080302/6644/748a/17fa/ab42a9c62358658411c64c1d32b427cd.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%91%A8%E5%8D%8E%E5%81%A5__%E5%A4%A9%E4%B8%8B%E6%9C%89%E6%83%85%E4%BA%BA.mp3' ,
 cover: 'https://p2.music.126.net/tjkALVspHU5gsnSEAllUXQ==/109951165611288961.jpg?param=130y130'  ,
 },{
 name: '有没有一首歌会让你想起我' ,
 artist: '周传雄' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400004Ao2JN0a62zb.m4a?guid=67062605bbdb2&vkey=C2B8C08E967E76C880BBA4A07D6B662401336FB851099527DEC8E5A66372916330A852D02626C9F4A539B8CD30A60073797B6B6F7E0A5C79&uin=3503185131&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%91%A8%E4%BC%A0%E9%9B%84__%E6%9C%89%E6%B2%A1%E6%9C%89%E4%B8%80%E9%A6%96%E6%AD%8C%E4%BC%9A%E8%AE%A9%E4%BD%A0%E6%83%B3%E8%B5%B7%E6%88%91.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000046C30Q1i8Van.jpg'  ,
 },{
 name: '让我欢喜让我忧' ,
 artist: '周华健' ,
-url: 'http://m704.music.126.net/20241010110803/761f043d903bb7c630313c5b517bd800/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/43983622393/def7/fdd5/21ab/e5f90264e0adf05b996177a302516040.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%91%A8%E5%8D%8E%E5%81%A5__%E8%AE%A9%E6%88%91%E6%AC%A2%E5%96%9C%E8%AE%A9%E6%88%91%E5%BF%A7.mp3' ,
 cover: 'https://p1.music.126.net/lPTxG0WlUb2T57DqAGXAZA==/109951165611286331.jpg?param=130y130'  ,
 },{
 name: '你' ,
 artist: '屠洪刚' ,
-url: 'https://m.hifini.com/music/屠洪刚 - 你.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%B1%A0%E6%B4%AA%E5%88%9A__%E4%BD%A0.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003XN27e1SviSb.jpg'  ,
 },{
 name: '晚风心里吹' ,
 artist: '阿梨粤' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400000VQhIC3fZvwC.m4a?guid=6707099341893&vkey=35C3EC28F8EC180E7337686DC5EF9373BD5804D5F5B4414585BA90A26D2CB4C57969592A721CEF87728E8587212C6D84315DFAF707829E97&uin=2826434134&fromtag=120032&src=C400000ryj6q0zY6zP.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%98%BF%E6%A2%A8%E7%B2%A4__%E6%99%9A%E9%A3%8E%E5%BF%83%E9%87%8C%E5%90%B9.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001whii43nuvNe.jpg'  ,
 },{
 name: '你的浅笑' ,
@@ -2119,22 +2119,22 @@ cover: 'https://p1.music.126.net/HvnVEOGaq5XTTrYt7Z6YuA==/109951168232658478.jpg
 },{
 name: '人生何处不相逢' ,
 artist: '阿梨粤' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400002sAsgw0wBx4W.m4a?guid=67073fb258a55&vkey=C5FB0CC2BB96B41BA58D85FA6F933E405370E992C43CA05562DFD87CF8CEB58B591AE174AFDCCECB6DA8F7FE71FA82699DDB102029E05CA3&uin=3050680536&fromtag=120032&src=C400002Qvpji4PgXDu.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%98%BF%E6%A2%A8%E7%B2%A4__%E4%BA%BA%E7%94%9F%E4%BD%95%E5%A4%84%E4%B8%8D%E7%9B%B8%E9%80%A2.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002NnEqw2UPuW3.jpg'  ,
 },{
 name: '秒针' ,
 artist: '阿梨粤' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400004fgV7G2goZSU.m4a?guid=67073fc42822b&vkey=3E6C307D5624B3A8ED2306C3F1D1582AA49EC0C08592B51B5CACC4E5D71A6202C4CDC836C5FA4631FE0FCBDC7EDE6E678CCB38721E1F529C&uin=453711656&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%98%BF%E6%A2%A8%E7%B2%A4__%E7%A7%92%E9%92%88.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000Fzz1W4SHfqm.jpg'  ,
 },{
 name: '情深深雨濛濛' ,
 artist: '杨胖雨' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400003iHWbo0vq21B.m4a?guid=670649723d80f&vkey=6DFE0977B9E5D56C9A48AB0216C4C0682BD09FAD1A32B755F92467B68D708F73E18B76B17C8124C024AA27A22A19BAAB0CB2C9404E5E5C97&uin=783089845&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9D%A8%E8%83%96%E9%9B%A8__%E6%83%85%E6%B7%B1%E6%B7%B1%E9%9B%A8%E6%BF%9B%E6%BF%9B.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002lM0pQ3ylmFW.jpg'  ,
 },{
 name: '羞答答的玫瑰静悄悄地开' ,
 artist: '杨胖雨' ,
-url: 'http://m10.music.126.net/20241010111118/aac6df39b3696ab90f63d07807992a21/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/14056855172/c56c/11a8/27cc/30653ecfbb3e092f7758171634588858.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9D%A8%E8%83%96%E9%9B%A8__%E7%BE%9E%E7%AD%94%E7%AD%94%E7%9A%84%E7%8E%AB%E7%91%B0%E9%9D%99%E6%82%84%E6%82%84%E5%9C%B0%E5%BC%80.mp3' ,
 cover: 'https://p2.music.126.net/aSXGSNsrrARhXle0BuG02g==/109951164515571904.jpg?param=130y130'  ,
 },{
 name: '三万英尺' ,
@@ -2144,78 +2144,288 @@ cover: 'https://p2.music.126.net/R0ZGPF_fZAHEy98TsSqaYw==/109951165669113830.jpg
 },{
 name: '有多少爱可以重来' ,
 artist: '迪克牛仔' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400003PCQKA4cXFD1.m4a?guid=67071493a44a7&vkey=72AFEEDC9A34CB65EFD8768C67B7069262A8D6B33EBDC4F3C6460A943A707E43DEDD0372CBDDEA7A418F69656D0FBE1FDFFD246065AFED9A&uin=896643169&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%BF%AA%E5%85%8B%E7%89%9B%E4%BB%94__%E6%9C%89%E5%A4%9A%E5%B0%91%E7%88%B1%E5%8F%AF%E4%BB%A5%E9%87%8D%E6%9D%A5.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004Fmvo41LZJ0F.jpg'  ,
 },{
 name: '风飞沙' ,
 artist: '迪克牛仔' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400003qg93t2G17tA.m4a?guid=67072b32d2ff4&vkey=A00C458AAA863243B49084A457A9A323C2647BE7639CAB294EDD0A98DBE873712053A00A565F5F15AF618F039F8A8C06C4F58ADBA609B4A2&uin=1919132957&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%BF%AA%E5%85%8B%E7%89%9B%E4%BB%94__%E9%A3%8E%E9%A3%9E%E6%B2%99.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000vYUZ00cAwgj.jpg'  ,
 },{
 name: '我这个你不爱的人' ,
 artist: '迪克牛仔' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400004dSDF41y3uzr.m4a?guid=67066b2ca1ffa&vkey=43108C3B5728307AECAB688967FA7E367A969D7631F20FCC6F178FA72FC585700B37DB90D407BBD39325D403E63AEE3AC49092C845C61425&uin=2684541625&fromtag=120032&src=C4000010vpYy3mfJE4.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%BF%AA%E5%85%8B%E7%89%9B%E4%BB%94__%E6%88%91%E8%BF%99%E4%B8%AA%E4%BD%A0%E4%B8%8D%E7%88%B1%E7%9A%84%E4%BA%BA.m4a' ,
 cover: 'https://p1.music.126.net/VKJz7gLjsfwJirYyROmt4g==/109951163032646363.jpg?param=130y130'  ,
 },{
 name: '酒干倘卖无' ,
 artist: '迪克牛仔' ,
-url: 'https://m.hifini.com/music/迪克牛仔 - 酒干倘卖无.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%BF%AA%E5%85%8B%E7%89%9B%E4%BB%94__%E9%85%92%E5%B9%B2%E5%80%98%E5%8D%96%E6%97%A0.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003ahUO42eNcjB.jpg'  ,
 },{
 name: '你知道我在等你吗' ,
 artist: '迪克牛仔' ,
-url: 'http://m704.music.126.net/20241010111353/b1d2909c1ffbf29fdd3e6e4ac31490ac/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/36139456785/5027/7d73/06cc/b1842649a467c913c435fc464e1e3d46.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%BF%AA%E5%85%8B%E7%89%9B%E4%BB%94__%E4%BD%A0%E7%9F%A5%E9%81%93%E6%88%91%E5%9C%A8%E7%AD%89%E4%BD%A0%E5%90%97.mp3' ,
 cover: 'https://p1.music.126.net/TIQMdKKvWY0dDr-yKBaBeQ==/19000660439853455.jpg?param=130y130'  ,
 },{
 name: '梦醒时分' ,
 artist: '迪克牛仔' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400004Wj8O24GjgeL.m4a?guid=496356694&vkey=A4600E8E0156AD8EFAF5E2AE63E95166BCC7FFFCD9F0142FFAB49DE3028DEEFCEFDD21541072BDEB5D659313E12AE69DF8DB526A6E702EA9&uin=&fromtag=103032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%BF%AA%E5%85%8B%E7%89%9B%E4%BB%94__%E6%A2%A6%E9%86%92%E6%97%B6%E5%88%86.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003ahUO42eNcjB.jpg'  ,
 },{
 name: 'Say You, Say Me' ,
 artist: 'Lionel Richie' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400001qFTBd0XBFo6.m4a?guid=6707086241778&vkey=15EA097FBDDC531245DC3CFA3A1DDED2A60137698C373993A0ABA2A6414F607E0B1B8E10C50EBC55116298B60802CCE8BE9F719104FCE000&uin=3508630155&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/Lionel%20Richie__Say%20You%2C%20Say%20Me.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002sgP6C02fKdW.jpg'  ,
 },{
 name: '别怕我伤心' ,
 artist: '张信哲' ,
-url: 'http://m804.music.126.net/20241010111529/c78e3d28c45ed6fa5c8fb756b69d852d/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/14096595859/9aff/a343/660f/19b4fa5c2c21344dd1350bbf39ceaace.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%BC%A0%E4%BF%A1%E5%93%B2__%E5%88%AB%E6%80%95%E6%88%91%E4%BC%A4%E5%BF%83.mp3' ,
 cover: 'https://p1.music.126.net/D0e4NZrx_0ArL5FhIXpJww==/109951163511560406.jpg?param=130y130'  ,
 },{
 name: 'River' ,
 artist: 'Eminem-Ed Sheeran' ,
-url: 'https://m.hifini.com/music/Eminem,Ed Sheeran - River.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/Eminem-Ed%20Sheeran__River.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M00000030Pth3K2EAg_1.jpg?max_age=2592000'  ,
 },{
 name: 'Shape of You' ,
 artist: 'Ed Sheeran' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400003xpV5R1dGwcd.m4a?guid=6707091d6c040&vkey=C107C5EF36ECDA5A9037783D9D61B1885FBEC521A536F697ABCDA07E91F2CDB327E486C23967696A5C093D7E0256A5547DE18D8F095459DC&uin=2156725105&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/Ed%20Sheeran__Shape%20of%20You.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001uSQEE2WdFLN.jpg'  ,
 },{
 name: '吻别' ,
 artist: '张学友' ,
-url: 'http://m704.music.126.net/20241010111224/ea028b6f0422c441f6f3aa7b689a26ac/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/34428238796/9f1e/996a/fb28/c71b8a94e85d27a4df30d543c462befe.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%BC%A0%E5%AD%A6%E5%8F%8B__%E5%90%BB%E5%88%AB.mp3' ,
 cover: 'https://p2.music.126.net/636SSPpKW0avAqkK1QgzgQ==/43980465112096.jpg?param=130y130'  ,
 },{
 name: '一千个伤心的理由' ,
 artist: '张学友' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400001HLxJV0qXsgE.m4a?guid=6706fe8c74566&vkey=5C0625FD93AE07A8E1A41A1A5EFD1EBF1C7F5AA0BFE7910C188036C7036BD7406384613701AFD7BED1D8E78D970DA6BABE48F98BDBA8C3D0&uin=95272751&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%BC%A0%E5%AD%A6%E5%8F%8B__%E4%B8%80%E5%8D%83%E4%B8%AA%E4%BC%A4%E5%BF%83%E7%9A%84%E7%90%86%E7%94%B1.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002nHrYA4KRGJM.jpg'  ,
 },{
 name: '饿狼传说' ,
 artist: '张学友' ,
-url: 'http://m704.music.126.net/20241010111815/e0e753e5bba498e4bef99418018867d1/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/34602508812/cc49/bb2c/1834/c581ee8b2f3a5b8e1d68b27500e5fdf1.mp3' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%BC%A0%E5%AD%A6%E5%8F%8B__%E9%A5%BF%E7%8B%BC%E4%BC%A0%E8%AF%B4.mp3' ,
 cover: 'https://p1.music.126.net/CDrwZuKT_D_m8nwnfBGx8Q==/19146895486205137.jpg?param=130y130'  ,
 },{
 name: '你的背包' ,
 artist: '陈奕迅' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400001EZ7xS1KVxaA.m4a?guid=67072f6b25d2f&vkey=1E0DF03859BE6565A7F6166017B32A5730E42CF641E047950A561523779B7DE5F4A884E40C957F1710BA639C898D6735BF3276B648124638&uin=2821156396&fromtag=120032' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%99%88%E5%A5%95%E8%BF%85__%E4%BD%A0%E7%9A%84%E8%83%8C%E5%8C%85.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004E0Y0A0R8FYZ.jpg'  ,
 },{
 name: '秋去秋来' ,
 artist: '叶倩文' ,
-url: 'http://ws6.stream.qqmusic.qq.com/C400001RHBag12hpHn.m4a?guid=670628ec5ef4f&vkey=8B11319A1085F42DD659B6E16BEBCD752C2E8BBF8C903EDA57EAF53C04FA0F8A2A735E9DBB822B7BF40A2ED6B982D336823E729A28FEA229&uin=2107945439&fromtag=120032&src=C400003p6EXx30hR5f.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%8F%B6%E5%80%A9%E6%96%87__%E7%A7%8B%E5%8E%BB%E7%A7%8B%E6%9D%A5.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002xHtTF4C9KGo.jpg'  ,
+},{
+name: '卜卦 (鼓点版)' ,
+artist: '张仟仟' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%BC%A0%E4%BB%9F%E4%BB%9F__%E5%8D%9C%E5%8D%A6%20%28%E9%BC%93%E7%82%B9%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002Kpbdx1wEbfk.jpg'  ,
+},{
+name: '卜卦 (古刹版)' ,
+artist: '好多倩' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%A5%BD%E5%A4%9A%E5%80%A9__%E5%8D%9C%E5%8D%A6%20%28%E5%8F%A4%E5%88%B9%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001RmatU3C9XQy.jpg'  ,
+},{
+name: '卜卦 (DJ伟然版)' ,
+artist: '崔子格' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%B4%94%E5%AD%90%E6%A0%BC__%E5%8D%9C%E5%8D%A6%20%28DJ%E4%BC%9F%E7%84%B6%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001Z503i37aIUS.jpg'  ,
+},{
+name: '任我逍遥' ,
+artist: '崔子格' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%B4%94%E5%AD%90%E6%A0%BC__%E4%BB%BB%E6%88%91%E9%80%8D%E9%81%A5.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000001lQNJ2wPbY4.jpg'  ,
+},{
+name: '红颜旧' ,
+artist: '崔子格' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%B4%94%E5%AD%90%E6%A0%BC__%E7%BA%A2%E9%A2%9C%E6%97%A7.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003SXbAH10kuaO.jpg'  ,
+},{
+name: '假装' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E5%81%87%E8%A3%85.mp3' ,
+cover: 'https://p1.music.126.net/Eq-oE3lUBOM1W8yoXQIckw==/109951164379393160.jpg?param=130y130'  ,
+},{
+name: '左手指月 (Live)' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E5%B7%A6%E6%89%8B%E6%8C%87%E6%9C%88%20%28Live%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001iSEF22IqiYB.jpg'  ,
+},{
+name: '天下无双 (Live)' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E5%A4%A9%E4%B8%8B%E6%97%A0%E5%8F%8C%20%28Live%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000jBvYb3EqK0q.jpg'  ,
+},{
+name: '更漏子' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E6%9B%B4%E6%BC%8F%E5%AD%90.mp3' ,
+cover: 'https://p1.music.126.net/IEBIS_ut1tWNphMa_uL9Fg==/109951164729613829.jpg?param=130y130'  ,
+},{
+name: '一样的月光 (纯享版)' ,
+artist: '丁当' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E4%B8%81%E5%BD%93__%E4%B8%80%E6%A0%B7%E7%9A%84%E6%9C%88%E5%85%89%20%28%E7%BA%AF%E4%BA%AB%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001ggWwj2uGlRE.jpg'  ,
+},{
+name: '打开' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E6%89%93%E5%BC%80.mp3' ,
+cover: 'https://p2.music.126.net/mEZcNgfazhywRG70LnHUpQ==/109951163286016915.jpg?param=130y130'  ,
+},{
+name: '没了我你依然拥有太阳（demo）' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E6%B2%A1%E4%BA%86%E6%88%91%E4%BD%A0%E4%BE%9D%E7%84%B6%E6%8B%A5%E6%9C%89%E5%A4%AA%E9%98%B3%EF%BC%88demo%EF%BC%89.mp3' ,
+cover: 'https://p2.music.126.net/AEBjp_fawe589nOOSg8UYg==/109951164480561132.jpg?param=130y130'  ,
+},{
+name: '你的答案 (Live)' ,
+artist: '黄霄雲' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%BB%84%E9%9C%84%E9%9B%B2__%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88%20%28Live%29.m4a' ,
+cover: 'https://p2.music.126.net/SbC8FdLw-PywMmnD35iRKg==/109951164725561024.jpg?param=130y130'  ,
+},{
+name: '卜卦(DJ阿樂版)' ,
+artist: 'DJ阿樂' ,
+url: 'https://storage.googleapis.com/xmusic/q/DJ%E9%98%BF%E6%A8%82__%E5%8D%9C%E5%8D%A6%28DJ%E9%98%BF%E6%A8%82%E7%89%88%29.mp3' ,
+cover: 'https://p2.music.126.net/fvH3sCCXCsGL7f98to7OPQ==/109951168855346853.jpg?param=130y130'  ,
+},{
+name: '卜卦' ,
+artist: '要不要买菜' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%A6%81%E4%B8%8D%E8%A6%81%E4%B9%B0%E8%8F%9C__%E5%8D%9C%E5%8D%A6.m4a' ,
+cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001G5U6i0C1Tcu_1.jpg?max_age=2592000'  ,
+},{
+name: '空心之城' ,
+artist: '文夫' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%96%87%E5%A4%AB__%E7%A9%BA%E5%BF%83%E4%B9%8B%E5%9F%8E.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000uInoF4U2tOt.jpg'  ,
+},{
+name: '一念秋风起' ,
+artist: 'L（桃籽）' ,
+url: 'https://storage.googleapis.com/xmusic/q/L%EF%BC%88%E6%A1%83%E7%B1%BD%EF%BC%89__%E4%B8%80%E5%BF%B5%E7%A7%8B%E9%A3%8E%E8%B5%B7.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000020f4tM0qCk18.jpg'  ,
+},{
+name: '人间这一遭' ,
+artist: '木杰' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9C%A8%E6%9D%B0__%E4%BA%BA%E9%97%B4%E8%BF%99%E4%B8%80%E9%81%AD.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000023H6Mp2QIi43.jpg'  ,
+},{
+name: '梦驼铃 (新声版DJ默涵版)' ,
+artist: '久儿红' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E4%B9%85%E5%84%BF%E7%BA%A2__%E6%A2%A6%E9%A9%BC%E9%93%83%20%28%E6%96%B0%E5%A3%B0%E7%89%88DJ%E9%BB%98%E6%B6%B5%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003ukBYi33eZR9.jpg'  ,
+},{
+name: '生来平凡' ,
+artist: '木杰' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9C%A8%E6%9D%B0__%E7%94%9F%E6%9D%A5%E5%B9%B3%E5%87%A1.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000S2X5Z1dgPLS.jpg'  ,
+},{
+name: '偏偏喜欢你(女声版)' ,
+artist: '阿梨粤' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E9%98%BF%E6%A2%A8%E7%B2%A4__%E5%81%8F%E5%81%8F%E5%96%9C%E6%AC%A2%E4%BD%A0%28%E5%A5%B3%E5%A3%B0%E7%89%88%29.mp3' ,
+cover: 'https://p2.music.126.net/MBwzGIe3fi8g0elWj_rVOQ==/109951164883622501.jpg?param=130y130'  ,
+},{
+name: '布拉格广场' ,
+artist: '蔡依林' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%94%A1%E4%BE%9D%E6%9E%97__%E5%B8%83%E6%8B%89%E6%A0%BC%E5%B9%BF%E5%9C%BA.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000q5U9S2OLNg4.jpg'  ,
+},{
+name: '月光' ,
+artist: '胡彦斌' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%83%A1%E5%BD%A6%E6%96%8C__%E6%9C%88%E5%85%89.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002XprJ21oyZsn.jpg'  ,
+},{
+name: '雪落下的声音 (Live)' ,
+artist: '林俊杰' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%9E%97%E4%BF%8A%E6%9D%B0__%E9%9B%AA%E8%90%BD%E4%B8%8B%E7%9A%84%E5%A3%B0%E9%9F%B3%20%28Live%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000042DlJJ3QNC0P.jpg'  ,
+},{
+name: '山高路远 (Live)' ,
+artist: '谭维维' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E8%B0%AD%E7%BB%B4%E7%BB%B4__%E5%B1%B1%E9%AB%98%E8%B7%AF%E8%BF%9C%20%28Live%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003uo2jb2hVCWo.jpg'  ,
+},{
+name: '上海滩' ,
+artist: '叶丽仪' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%8F%B6%E4%B8%BD%E4%BB%AA__%E4%B8%8A%E6%B5%B7%E6%BB%A9.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000044pKtL3dvqss.jpg'  ,
+},{
+name: '上海滩 (国语版)' ,
+artist: '叶丽仪' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%8F%B6%E4%B8%BD%E4%BB%AA__%E4%B8%8A%E6%B5%B7%E6%BB%A9%20%28%E5%9B%BD%E8%AF%AD%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000046fyha2ez8YD.jpg'  ,
+},{
+name: '新上海滩' ,
+artist: '叶丽仪' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%8F%B6%E4%B8%BD%E4%BB%AA__%E6%96%B0%E4%B8%8A%E6%B5%B7%E6%BB%A9.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001uk5wz3sRk0y.jpg'  ,
+},{
+name: '当·2024' ,
+artist: '半吨兄弟' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%8D%8A%E5%90%A8%E5%85%84%E5%BC%9F__%E5%BD%93%C2%B72024.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000039LfGy4YJKea.jpg'  ,
+},{
+name: '上海滩' ,
+artist: '刘德华' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E5%88%98%E5%BE%B7%E5%8D%8E__%E4%B8%8A%E6%B5%B7%E6%BB%A9.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000XR8sn0uycG3.jpg'  ,
+},{
+name: '相思' ,
+artist: '毛阿敏' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%AF%9B%E9%98%BF%E6%95%8F__%E7%9B%B8%E6%80%9D.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000036ApPL3v2jVH.jpg'  ,
+},{
+name: '赤伶（Cover：HITA）' ,
+artist: '执素兮' ,
+url: 'https://m.hifini.com/music/demo.%E8%B5%A4%E4%BC%B6.m4a' ,
+cover: 'https://p1.music.126.net/TGKPGBX4O--nnDy82wSM5A==/17735122556351910.jpg?param=177y177'  ,
+},{
+name: '人间无我' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E4%BA%BA%E9%97%B4%E6%97%A0%E6%88%91.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000nZDVV0bExBB.jpg'  ,
+},{
+name: '花醉三千' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E8%8A%B1%E9%86%89%E4%B8%89%E5%8D%83.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004BYuNZ05p6VZ.jpg'  ,
+},{
+name: '赤伶 (正式版)' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E8%B5%A4%E4%BC%B6%20%28%E6%AD%A3%E5%BC%8F%E7%89%88%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000037kCQH1QYPfP.jpg'  ,
+},{
+name: '妙笔生花' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E5%A6%99%E7%AC%94%E7%94%9F%E8%8A%B1.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002Dfflr3l0lRV.jpg'  ,
+},{
+name: '遇萤素兮' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E9%81%87%E8%90%A4%E7%B4%A0%E5%85%AE.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003lxESe1s0DwU.jpg'  ,
+},{
+name: '有雁' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E6%9C%89%E9%9B%81.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004TiQJX0dHI5e.jpg'  ,
+},{
+name: '姻缘结' ,
+artist: '橙光音乐' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%A9%99%E5%85%89%E9%9F%B3%E4%B9%90__%E5%A7%BB%E7%BC%98%E7%BB%93.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000lFB993M1u2m.jpg'  ,
+},{
+name: '静月思' ,
+artist: '任芯冉' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E4%BB%BB%E8%8A%AF%E5%86%89__%E9%9D%99%E6%9C%88%E6%80%9D.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002SvjGP2giv2V.jpg'  ,
+},{
+name: '归去来兮 (Cover：叶炫清)' ,
+artist: '执素兮' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E5%BD%92%E5%8E%BB%E6%9D%A5%E5%85%AE%20%28Cover%EF%BC%9A%E5%8F%B6%E7%82%AB%E6%B8%85%29.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003h7M3o0Wwkpj.jpg'  ,
+},{
+name: '赤伶' ,
+artist: 'HITA' ,
+url: 'https://storage.googleapis.com/xmusic/q/HITA__%E8%B5%A4%E4%BC%B6.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003SElah4eQ41c.jpg'  ,
 },];
 function getRandomSubarray(arr, size) {
   var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;
