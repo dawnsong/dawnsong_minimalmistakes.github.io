@@ -143,6 +143,38 @@ cover: '{cover}'  ,
           else: ft.write(line)
 
 #----------------------------------------------------------------------------
+def hifiniHeaders(rURL, bytesEnd=''):
+  ck=sb.driver.get_cookies()
+  bbsIDToken=''
+  for i in range(len(ck)):
+    bbsIDToken=f'{bbsIDToken} {ck[i]["name"]}={ck[i]["value"]};'
+  
+  hifiniHeaders={"accept": "*/*",
+"priority": "i",
+"range": f"bytes=0-{bytesEnd}",
+'dnt':'1',
+'referer':rURL,
+'cookie':bbsIDToken.strip(),
+"sec-ch-ua-mobile": "?0",
+"sec-fetch-dest": "audio",
+"sec-fetch-mode": "no-cors",
+"sec-fetch-site": "same-origin",
+"referrer-policy": "strict-origin-when-cross-origin"}
+  logging.info(hifiniHeaders)
+  return hifiniHeaders
+
+def requestsHeader(mURL, rURL):  
+  if 'm.hifini.com' in mURL:    
+    return requests.head(mURL, allow_redirects=True, stream=False, headers=hifiniHeaders(rURL, bytesEnd='0'))
+  else:
+    return requests.head(mURL, allow_redirects=True, stream=False)  
+def requestsGet(mURL, rURL):
+  if 'm.hifini.com' in mURL:    
+    return requests.get(mURL, allow_redirects=True, stream=False, headers=hifiniHeaders(rURL))
+  else:
+    return requests.get(mURL, allow_redirects=True, stream=False)
+  
+
 def getFavSongs(url, favdb={}):
   sbd=sb.driver
   sbd.uc_open_with_tab(url)
@@ -201,18 +233,10 @@ def getFavSongs(url, favdb={}):
     # sbd.uc_open_with_tab(f'https://hifini.com/{mUrl}')
     # rsleep(3)
     # qUrl=sbd.current_url
-    hifiniHeaders={"accept": "*/*",
-"priority": "i",
-"range": "bytes=0-",
-"sec-ch-ua-mobile": "?0",
-"sec-fetch-dest": "audio",
-"sec-fetch-mode": "no-cors",
-"sec-fetch-site": "same-site",
-"Referer": "https://hifini.com/",
-"Referrer-Policy": "strict-origin-when-cross-origin"}
-    r=requests.head(mUrl, allow_redirects=True, stream=False, headers=hifiniHeaders) #only metadata, not to download
+
+    r=requestsHeader(mUrl, url) #requests.head(mUrl, allow_redirects=True, stream=False) #, headers=hifiniHeaders) #only metadata, not to download
     qUrl=None
-    if r.status_code == 200:
+    if r.status_code in {200, 206}:
       logging.info(f"header: {r} , mUrl: {mUrl}")
       qUrl=r.url
       favPage[f'url:{author}__{title}']=qUrl
@@ -228,14 +252,16 @@ def getFavSongs(url, favdb={}):
       favPage[f'file:{author}__{title}']=Path(fn).name #only basename
       if not Path(fn).exists():
         logging.info(f"Downloading song {fn} from {qUrl}")
-        with requests.get(qUrl, allow_redirects=True, stream=True, headers=hifiniHeaders) as r:
+        with requestsGet(qUrl, url) as r: #, headers=hifiniHeaders) as r:
           with open(fn, 'wb') as f:
-              shutil.copyfileobj(r.raw, f)        
+              shutil.copyfileobj(r.raw, f)
       else:
         logging.info(f"SONG file {fn} already exists, ignore downloading")
       if Path(fn).exists():
         favdb[fk]=Path(fn).name #update link from fav list to real downloaded music filename        
         logging.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
+    else:
+      logging.warning(r)
     logging.info(qUrl)
     logging.info(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
