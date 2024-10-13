@@ -171,9 +171,9 @@ def requestsHeader(mURL, rURL):
     return requests.head(mURL, allow_redirects=True, stream=False)  
 def requestsGet(mURL, rURL):
   if 'hifini.com' in mURL:    
-    return requests.get(mURL, allow_redirects=True, stream=False, headers=hifiniHeaders(rURL))
+    return requests.get(mURL, allow_redirects=True, stream=True, headers=hifiniHeaders(rURL)) #use stream to download hifini music
   else:
-    return requests.get(mURL, allow_redirects=True, stream=False)
+    return requests.get(mURL, allow_redirects=True, stream=True) #stream=True since we want to save raw data to m4a file, stream=False also worked for qqMusic
   
 
 def getFavSongs(url, favdb={}):
@@ -245,7 +245,7 @@ def getFavSongs(url, favdb={}):
       ufn=qUrl.split('/')[-1]
       ufn=ufn.split('?')[0]
       try:
-        ext=ufn.split('.')[1]
+        ext=ufn.split('.')[-1] #the last part
       except Exception as e:
         ext=''
         logging.error(f"qURL={qUrl} |no extension Error|: {e}")
