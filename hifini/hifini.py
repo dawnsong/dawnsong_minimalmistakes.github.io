@@ -114,6 +114,7 @@ def exportFav(favdb):
     if fk in favdb: 
       if not ( gk in favdb and favdb[gk] ): #only check if I have not checked with my google storage
         url, favdb[gk]=fn2googleStorageURL(favdb[fk], favdb[k])
+        logging.debug(favdb[gk])
         rsleep(3)
         if favdb[gk]: favdb[gURL]=url
       if gk in favdb and favdb[gk]: 
