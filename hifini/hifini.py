@@ -240,10 +240,11 @@ def getFavSongs(url, favdb={}):
     if r.status_code in {200, 206}:
       logging.info(f"header: {r} , mUrl: {mUrl}")
       qUrl=r.url
-      if '404' in qUrl:
-        #deal with 404 from music.163.com/404
-        logging.warning(f'404 found qUrl: {qUrl} , i.e., the 200/206 returned header URL for the song')
-      else:
+      # if '404' in qUrl:
+      #   #deal with 404 from music.163.com/404
+      #   logging.warning(f'404 found qUrl: {qUrl} , i.e., the 200/206 returned header URL for the song')
+      # else:
+      if 1==1:
         favPage[f'url:{author}__{title}']=qUrl
         #save mp3 to local
         ufn=qUrl.split('/')[-1]
