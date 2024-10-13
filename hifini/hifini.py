@@ -240,27 +240,31 @@ def getFavSongs(url, favdb={}):
     if r.status_code in {200, 206}:
       logging.info(f"header: {r} , mUrl: {mUrl}")
       qUrl=r.url
-      favPage[f'url:{author}__{title}']=qUrl
-      #save mp3 to local
-      ufn=qUrl.split('/')[-1]
-      ufn=ufn.split('?')[0]
-      try:
-        ext=ufn.split('.')[-1] #the last part
-      except Exception as e:
-        ext=''
-        logging.error(f"qURL={qUrl} |no extension Error|: {e}")
-      fn=f"songs/{author}__{title}.{ext}"
-      favPage[f'file:{author}__{title}']=Path(fn).name #only basename
-      if not Path(fn).exists():
-        logging.info(f"Downloading song {fn} from {qUrl}")
-        with requestsGet(qUrl, url) as r: #, headers=hifiniHeaders) as r:
-          with open(fn, 'wb') as f:
-              shutil.copyfileobj(r.raw, f)
+      if '404' in qUrl:
+        #deal with 404 from music.163.com/404
+        logging.warning(f'404 found qUrl: {qUrl} , i.e., the 200/206 returned header URL for the song')
       else:
-        logging.info(f"SONG file {fn} already exists, ignore downloading")
-      if Path(fn).exists():
-        favdb[fk]=Path(fn).name #update link from fav list to real downloaded music filename        
-        logging.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
+        favPage[f'url:{author}__{title}']=qUrl
+        #save mp3 to local
+        ufn=qUrl.split('/')[-1]
+        ufn=ufn.split('?')[0]
+        try:
+          ext=ufn.split('.')[-1] #the last part
+        except Exception as e:
+          ext=''
+          logging.error(f"qURL={qUrl} |no extension Error|: {e}")
+        fn=f"songs/{author}__{title}.{ext}"
+        favPage[f'file:{author}__{title}']=Path(fn).name #only basename
+        if not Path(fn).exists():
+          logging.info(f"Downloading song {fn} from {qUrl}")
+          with requestsGet(qUrl, url) as r: #, headers=hifiniHeaders) as r:
+            with open(fn, 'wb') as f:
+                shutil.copyfileobj(r.raw, f)
+        else:
+          logging.info(f"SONG file {fn} already exists, ignore downloading")
+        if Path(fn).exists():
+          favdb[fk]=Path(fn).name #update link from fav list to real downloaded music filename        
+          logging.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
     else:
       logging.warning(r)
     logging.info(qUrl)
