@@ -165,12 +165,12 @@ def hifiniHeaders(rURL, bytesEnd=''):
   return hifiniHeaders
 
 def requestsHeader(mURL, rURL):  
-  if 'm.hifini.com' in mURL:    
+  if 'hifini.com' in mURL:    
     return requests.head(mURL, allow_redirects=True, stream=False, headers=hifiniHeaders(rURL, bytesEnd='0'))
   else:
     return requests.head(mURL, allow_redirects=True, stream=False)  
 def requestsGet(mURL, rURL):
-  if 'm.hifini.com' in mURL:    
+  if 'hifini.com' in mURL:    
     return requests.get(mURL, allow_redirects=True, stream=False, headers=hifiniHeaders(rURL))
   else:
     return requests.get(mURL, allow_redirects=True, stream=False)
