@@ -268,7 +268,7 @@ def getFavSongs(url, favdb={}):
           logging.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
     else:
       logging.warning(r)
-    logging.info(qUrl)
+    # logging.info(qUrl)
     logging.info(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
     # break
