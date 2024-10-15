@@ -160,7 +160,8 @@ def hifiniHeaders(rURL, bytesEnd=''):
 "sec-fetch-dest": "audio",
 "sec-fetch-mode": "no-cors",
 "sec-fetch-site": "same-origin",
-"referrer-policy": "strict-origin-when-cross-origin"}
+# "referrer-policy": "strict-origin-when-cross-origin",
+}
   logging.info(hifiniHeaders)
   return hifiniHeaders
 
