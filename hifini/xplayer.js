@@ -2374,7 +2374,7 @@ cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000036ApPL3v2jVH.jpg'  
 },{
 name: '赤伶（Cover：HITA）' ,
 artist: '执素兮' ,
-url: 'https://m.hifini.com/music/demo.%E8%B5%A4%E4%BC%B6.m4a' ,
+url: 'https://storage.googleapis.com/xmusic/q/%E6%89%A7%E7%B4%A0%E5%85%AE__%E8%B5%A4%E4%BC%B6%EF%BC%88Cover%EF%BC%9AHITA%EF%BC%89.m4a' ,
 cover: 'https://p1.music.126.net/TGKPGBX4O--nnDy82wSM5A==/17735122556351910.jpg?param=177y177'  ,
 },{
 name: '人间无我' ,
@@ -2426,6 +2426,91 @@ name: '赤伶' ,
 artist: 'HITA' ,
 url: 'https://storage.googleapis.com/xmusic/q/HITA__%E8%B5%A4%E4%BC%B6.m4a' ,
 cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003SElah4eQ41c.jpg'  ,
+},{
+name: '一心' ,
+artist: '郁可唯' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400000fLypb0g6nqP.m4a?guid=670bea214b9ab&vkey=3BB07F744889CA7FD49A8CDE4B04621DB5D495B966B64114A37698226A2DE62E1B8CFD879A7D2AB3010F394FB0B0CA8501CE95B95F8389C9&uin=3508630155&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000042o7J60kegFH.jpg'  ,
+},{
+name: '乡间的小路' ,
+artist: '齐豫' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400001NUSA90Sr6Ru.m4a?guid=57673703&vkey=71EE5C86D024B838C9A204FE402C5E181055DA075CFC05B8B8F12DCCF3652E47C4BCEAA378E1ED1B334259FA011DA9798CAEAA6EF24CBAAE&uin=&fromtag=103032&src=C400001mepCw44GCC9.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002bhFsI0F3v6o.jpg'  ,
+},{
+name: '西海情歌' ,
+artist: '刀郎' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400003MIzAj4K1AWq.m4a?guid=670b4888bbd7f&vkey=4883928DFC03B4C2FD5279BC3BFCD96BC87DA70AE7445E518FE469533329EE3CD5E00EC0613DBAE235691DF8CCA8C441D767E92DADC1F379&uin=1023422191&fromtag=120032&src=C400000VhqFb1koRBa.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000024RXz94OSKCa.jpg'  ,
+},{
+name: '希望 (国语)' ,
+artist: '陈慧琳' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400002HvQ1J1Ce44b.m4a?guid=670afc1f37aae&vkey=7AF74B5790FDC5D7B43BAEA568E44DDBA02896ED80097B4A90FABA0DBAF551C01D4E35C6EB66B648E786C18819968B153FC71AE782F59A0E&uin=3520939828&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000020678J4WEsrW.jpg'  ,
+},{
+name: '喜欢你' ,
+artist: 'Beyond' ,
+url: 'http://m704.music.126.net/20241014001013/c3be6747ad92a8b17a6bdcc1d1d4dbd6/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/28261600116/04eb/d65e/d437/f31b98ff715bd5954d1ea83346f9f484.mp3' ,
+cover: 'https://p2.music.126.net/KWpSyKhpWElmKciwOAcAeA==/109951165309394480.jpg?param=130y130'  ,
+},{
+name: '大地' ,
+artist: 'Beyond' ,
+url: 'http://m704.music.126.net/20241014000033/4b6b80103c2401dbe9f13206a5a6bfa5/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/29227172396/3731/158e/a411/a0649226f0cd5c72bbd95616f7fc1319.mp3' ,
+cover: 'https://p1.music.126.net/9VII0vWl5hnIq0ZNpL6Rgw==/107752139525259.jpg?param=130y130'  ,
+},{
+name: '谁伴我闯荡' ,
+artist: 'Beyond' ,
+url: 'http://m804.music.126.net/20241014000023/fbe54f70584ca86280fc76034362e595/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/14096638952/47c5/e60e/8f14/46eb4eca06d784f80bcb885d8201e972.mp3' ,
+cover: 'https://p2.music.126.net/jFVtPnc0-cBv4k2_Fuld-A==/54975581392009.jpg?param=130y130'  ,
+},{
+name: '真的爱你' ,
+artist: 'Beyond' ,
+url: 'http://m704.music.126.net/20241013235803/6da1a6e7a6fa692ea3ea2cccbb386ab7/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/32367084288/4748/3c74/a812/af22aca1d890ff3eee8d6cd4f4d195a2.mp3' ,
+cover: 'https://p1.music.126.net/5IH5J7OSQ78Lr9ypRijYAQ==/59373627912136.jpg?param=130y130'  ,
+},{
+name: '海阔天空' ,
+artist: 'BEYOND' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400002L32ox4H63Iy.m4a?guid=670ad3f1628a5&vkey=C5F438EE0D299997DED4F5C3E246A8B33F2F0E349FCA8BE38C7F1DEBD841A60F470B5EFC2F66DD03F601D1F54E671CD7B8228A8803748DA4&uin=484842190&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004CLlFV0mj6fC.jpg'  ,
+},{
+name: '光辉岁月' ,
+artist: 'Beyond' ,
+url: 'http://m804.music.126.net/20241014000001/7d82cd9f4fbcbb4a1226ec899853a393/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/14096521465/5dea/8632/d964/b149bd49eb62302951ae0e3183508bd8.mp3' ,
+cover: 'https://p2.music.126.net/JOJvZc_7SqQjKf8TktQ_bw==/29686813951246.jpg?param=130y130'  ,
+},{
+name: '雪落下的声音 (Live)' ,
+artist: '周深' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C4000047odvQ1m604Z.m4a?guid=670b4def0546d&vkey=E25CB23D1CA677F98BE5A542A3079C6C4F400770D67D7D9F682F0BDD8F6B25B4608396329C2ABB0B49B7258FFD0CBDCBE2730145C97BB8AC&uin=95272751&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002aVGdm48gt3F.jpg'  ,
+},{
+name: '郎的诱惑' ,
+artist: '凤凰传奇' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400002LNbih2v8EdY.m4a?guid=670d2cc13c464&vkey=F9B19D69C02CAC8D94E92A27D78A1BC26BA4BD2468027F4A66851263E43D8E4E9B3D99D563CE2BB5F710C871552D3C4242C94B8BDB635301&uin=2975159073&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000021YkiD1WR578.jpg'  ,
+},{
+name: '自由飞翔' ,
+artist: '凤凰传奇' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400002oZgYO2k36L8.m4a?guid=670daf189a7de&vkey=1EA98BC25B2128F6C6A43710119455F42B08DD4F3ED271E8C110699C788174C7494D6D57B1C95DC95B2E7BFEA0F5B4CCA9B2CAACE8D645C6&uin=2838023317&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000xdvfH2DxJ4f.jpg'  ,
+},{
+name: '策马奔腾' ,
+artist: '凤凰传奇' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400001rc5fK2jIEjV.m4a?guid=670d8496f087a&vkey=78FBFE9A5559C1A55E336A41055550BE2AFC28F76D750C5B6641F41BD01F8DA0D6C70B7FD1A7FE12CD744A72DE6AE42E9B0DA6F38AFF500E&uin=2656046931&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001uQV7J3Ld3e8.jpg'  ,
+},{
+name: '自从有了你' ,
+artist: '赵薇' ,
+url: 'https://m.hifini.com/music/C400003yCDqe0fPhPn.m4a' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000004TzspP3tMSt9.jpg'  ,
+},{
+name: '追梦人' ,
+artist: '凤飞飞' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C4000033s7HW1f65Qz.m4a?guid=8589114&vkey=757314A1DD27EEC115923C068613EADAE6F7495746BC2EA15F8CA83DFCA6654A8112635D762448D906E293BBD1F589C44A8320324862E858&uin=&fromtag=103032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000uRG3K38yZIe.jpg'  ,
+},{
+name: '荷塘月色' ,
+artist: '凤凰传奇' ,
+url: 'http://ws6.stream.qqmusic.qq.com/C400002jAwo9382Wjv.m4a?guid=670dc03e1b8ed&vkey=C5F78110AA7377E672F45806D25CEBF2EF4D12684E1F7F0FB80B7F3B45CB2E0568CF17079C34DB572E39240B25D349926EC0D116CD0CF125&uin=2459667980&fromtag=120032' ,
+cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002jdWB13atXv8.jpg'  ,
 },];
 function getRandomSubarray(arr, size) {
   var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;

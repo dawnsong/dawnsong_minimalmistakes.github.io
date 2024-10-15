@@ -112,7 +112,7 @@ def exportFav(favdb):
     gURL=f'GoogleStoredURL:{artist}__{name}'
     url=favdb[k]    
     if fk in favdb: 
-      if not ( gk in favdb and favdb[gk] ): #only check if I have not checked with my google storage
+      if (not ( gk in favdb and favdb[gk] )) and ('404' not in favdb[fk]): #only check if I have not checked with my google storage
         url, favdb[gk]=fn2googleStorageURL(favdb[fk], favdb[k])
         logging.debug(favdb[gk])
         rsleep(3)
