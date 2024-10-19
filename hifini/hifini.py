@@ -83,50 +83,60 @@ def rsleep(maxSeconds=180, minSeconds=1):
   print(f"random sleep {rsec} seconds")
   time.sleep(rsec)
 
+
 #https://stackoverflow.com/questions/72938098/list-of-entries-files-and-folders-in-a-directory-tree-by-os-scandir-in-pytho
 from typing import Iterator, Tuple  
-def tree2list(directory: str) -> Iterator[Tuple[str, str, str]]:
+def dir2list(dir: str) -> Iterator[Tuple[str, str, str]]:
   import os
-  for i in os.scandir(directory):
+  for i in os.scandir(dir):
     if i.is_dir():
       yield ["dir", i.name, i.path]
-      yield from tree2list(i.path)
+      yield from dir2list(i.path)
     else:
       yield ["file", i.name, i.path]
 #----------------------------------------------------------------------------
+def isMusicSongFile(fp):
+  import magic
+  mgc=magic.from_file(fp)
+  logger.info(f"file {fp} magic: {mgc}")  
+  for st in ['audio', 'mp4', 'mpeg adts']: 
+    if st in str.lower(mgc): return True, mgc 
+  return False, mgc  
+
 def updateLocalFav(ld='./local', favdb={}):
   # from pathlib import Path
-  import os, magic, logging
+  import os
   from urllib.parse import quote, unquote
   gurl = "https://storage.googleapis.com/xmusic/local/"  
   # for f in os.scandir(ld):
-  for ft, fn, fp in tree2list(ld):    
-    if ft=='dir': continue
-    mgc=magic.from_file(fp)
-    logging.info(f"file {fp} magic: {mgc}")
-    if 'audio' in str.lower(mgc):
+  for ft, fn, fp in dir2list(ld):    
+    if ft=='dir': continue    
+    isMusicSong, mgc=isMusicSongFile(fp)
+    if isMusicSong:
       favdb[f'url:{fn}']=quote(gurl+fn, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
+    else:
+      logger.warning(f"Ignore {fp} since it is not audio BUT {mgc}")
   return favdb
 
 def fn2googleStorageURL(fn, qURL):
   from urllib.parse import quote, unquote
   gurl = f"https://storage.googleapis.com/xmusic/q/{fn}"
   q=quote(gurl, safe=':/')
-  logging.info(f"Trying {fn} -> {gurl}")
+  logger.info(f"Trying {fn} -> {gurl}")
   h=requests.head(q)
-  logging.info(f"{fn} size: {int(h.headers['Content-Length']) /1024./1024:.1f} MB,type: {h.headers['Content-Type']}")
+  logger.info(f"{fn} size: {int(h.headers['Content-Length']) /1024./1024:.1f} MB,type: {h.headers['Content-Type']}")
   if h.status_code==200 and 'audio' in h.headers['Content-Type'].lower():
-    logging.info(f"Found audio {fn} in {gurl}")
+    logger.info(f"Found audio {fn} in {gurl}")
     return q, True
   else: 
-    logging.info(f"NO audio {fn} in Google Storage yet: {h.status_code}/{h.headers['Content-Type']}, use original music URL {qURL} instead")
+    logger.info(f"NO audio {fn} in Google Storage yet: {h.status_code}/{h.headers['Content-Type']}, use original music URL {qURL} instead")
     return qURL, False
 
 
 def exportFav(favdb):
   with open(f"songs.txt", 'w') as f: f.write("")
   for k in tqdm([ku for ku in favdb.keys() if re.match(r'url:', ku)]):
-    logging.info(f"exporting {k}: {favdb[k]}")
+    logger.info(f"exporting {k}: {favdb[k]}")
     kk=k.replace('url:','')
     artist =re.sub('__.*', '', kk)
     name=re.sub('.*__', '', kk)
@@ -138,15 +148,15 @@ def exportFav(favdb):
     if fk in favdb: 
       if (not ( gk in favdb and favdb[gk] )) and ('404' not in favdb[fk]): #only check if I have not checked with my google storage
         url, favdb[gk]=fn2googleStorageURL(favdb[fk], favdb[k])
-        logging.debug(favdb[gk])
+        logger.debug(favdb[gk])
         rsleep(3)
         if favdb[gk]: favdb[gURL]=url
       if gk in favdb and favdb[gk]: 
         url = favdb[gURL]
-        logging.info(f"use Google Storage url: {url}")
+        logger.info(f"use Google Storage url: {url}")
     else:
-      logging.warning(f"{fk} not found in favdb")
-    logging.info(f"Use cached URL: {url}")
+      logger.warning(f"{fk} not found in favdb")
+    logger.info(f"Use cached URL: {url}")
     #-------------------------------------------------
     cover=favdb[f'pic:{kk}']
     with open(f"songs.txt", 'a') as f:
@@ -186,7 +196,7 @@ def hifiniHeaders(rURL, bytesEnd=''):
 "sec-fetch-site": "same-origin",
 # "referrer-policy": "strict-origin-when-cross-origin",
 }
-  logging.info(hifiniHeaders)
+  logger.info(hifiniHeaders)
   return hifiniHeaders
 
 def requestsHeader(mURL, rURL):  
@@ -226,16 +236,16 @@ def getFavSongs(url, favdb={}):
     # if f'url:{artist}__{name}' in favdb:
     #   logging.info(f"url:{artist}__{name} already exists in favdb: {favdb[f'url:{artist}__{name}']}")
     #   continue
-    logging.info(f"Checking if {artist}__{name} already has song downloaded")
+    logger.info(f"Checking if {artist}__{name} already has song downloaded")
     fk=f'file:{artist}__{name}'
     # dl=f'downloaded:{artist}__{name}' #make extra link in case the listed artist/song name does not match real song/artist name within the linked detail song page
     if fk in favdb and Path(f'songs/{favdb[fk]}').is_dir(): favdb.pop(fk, None)
     if fk in favdb and Path(f'songs/{favdb[fk]}').is_file() and Path(f'songs/{favdb[fk]}').exists():
-      logging.info(f"{fk} | songs/{favdb[fk]} already downloaded")
+      logger.info(f"{fk} | songs/{favdb[fk]} already downloaded")
        #mark downloaded solving historical flags due to the difference between fav list and real song name/artist in detailed song page
       continue
     
-    logging.info(f"NEW {fk}")
+    logger.info(f"NEW {fk}")
 
     href=favPage[hrefs[i]]
     sbd.uc_open_with_tab(href)
@@ -250,7 +260,7 @@ def getFavSongs(url, favdb={}):
     title=sbd.execute_script("return ap4.music.title").strip()
     author=sbd.execute_script("return ap4.music.author").strip().replace('/', '-').replace('\\', '-')
     pic=sbd.execute_script("return ap4.music.pic")
-    logging.info(f'{title} - {author} : {mUrl}')
+    logger.info(f'{title} - {author} : {mUrl}')
     favPage[f'pic:{author}__{title}']=pic
     favPage[f'url:{author}__{title}']=mUrl
     favPage[f'file:{author}__{title}']=''
@@ -263,7 +273,7 @@ def getFavSongs(url, favdb={}):
     r=requestsHeader(mUrl, url) #requests.head(mUrl, allow_redirects=True, stream=False) #, headers=hifiniHeaders) #only metadata, not to download
     qUrl=None
     if r.status_code in {200, 206}:
-      logging.info(f"header: {r} , mUrl: {mUrl}")
+      logger.info(f"header: {r} , mUrl: {mUrl}")
       qUrl=r.url
       # if '404' in qUrl:
       #   #deal with 404 from music.163.com/404
@@ -278,23 +288,23 @@ def getFavSongs(url, favdb={}):
           ext=ufn.split('.')[-1] #the last part
         except Exception as e:
           ext=''
-          logging.error(f"qURL={qUrl} |no extension Error|: {e}")
+          logger.error(f"qURL={qUrl} |no extension Error|: {e}")
         fn=f"songs/{author}__{title}.{ext}"
         favPage[f'file:{author}__{title}']=Path(fn).name #only basename
         if not Path(fn).exists():
-          logging.info(f"Downloading song {fn} from {qUrl}")
+          logger.info(f"Downloading song {fn} from {qUrl}")
           with requestsGet(qUrl, url) as r: #, headers=hifiniHeaders) as r:
             with open(fn, 'wb') as f:
                 shutil.copyfileobj(r.raw, f)
         else:
-          logging.info(f"SONG file {fn} already exists, ignore downloading")
+          logger.info(f"SONG file {fn} already exists, ignore downloading")
         if Path(fn).exists():
           favdb[fk]=Path(fn).name #update link from fav list to real downloaded music filename        
-          logging.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
+          logger.info(f"SONG {fn} exists| {favdb[fk]} is MARKED downloaded")
     else:
-      logging.warning(r)
+      logger.warning(r)
     # logging.info(qUrl)
-    logging.info(f'{title} - {author} : {qUrl}')
+    logger.info(f'{title} - {author} : {qUrl}')
     rsleep(30, minSeconds=10)
     # break
   return favPage
@@ -317,7 +327,7 @@ def getFavList(favdb={}):
       print(psongs)
       favdb.update(psongs)
     except Exception as e:
-      logging.error(e)
+      logger.error(e)
     # print(favdb)
     rsleep(5)
     # break
@@ -390,8 +400,9 @@ def main():
     match op:
       case 'fav':
         try:
+          favdb = updateLocalFav('./local', favdb)
           favdb = getFavList(favdb)
-          favdb = updateLocalFav(favdb) #scan, update, and export local fav music song files, assuming I have uploaded to Google storage
+          # favdb = updateLocalFav(favdb) #scan, update, and export local fav music song files, assuming I have uploaded to Google storage
         finally:
           joblib.dump([favdb], fzdb) #save after parsing each NPI
           exportFav(favdb)
