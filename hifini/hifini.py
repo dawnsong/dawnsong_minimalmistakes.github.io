@@ -95,7 +95,7 @@ def dir2list(dir: str) -> Iterator[Tuple[str, str, str]]:
     else:
       yield ["file", i.name, i.path]
 #----------------------------------------------------------------------------
-def isMusicSongFile(fp):
+def isMusicSongFile(fp) -> Tuple[bool, str]:
   import magic
   mgc=magic.from_file(fp)
   logger.info(f"file {fp} magic: {mgc}")  
@@ -107,13 +107,15 @@ def updateLocalFav(ld='./local', favdb={}):
   # from pathlib import Path
   import os
   from urllib.parse import quote, unquote
-  gurl = "https://storage.googleapis.com/xmusic/local/"  
+  gurl = f"https://storage.googleapis.com/xmusic/{Path(ld).stem}/"  
   # for f in os.scandir(ld):
   for ft, fn, fp in dir2list(ld):    
     if ft=='dir': continue    
     isMusicSong, mgc=isMusicSongFile(fp)
     if isMusicSong:
+      #adding 2 essential keys
       favdb[f'url:{fn}']=quote(gurl+fn, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
+      favdb[f'pic:{fn}']=quote(gurl+Path(fn).with_suffix('.jpg').name, safe=':/')
     else:
       logger.warning(f"Ignore {fp} since it is not audio BUT {mgc}")
   return favdb
@@ -399,10 +401,9 @@ def main():
     # driver.switch_to.window(driver.window_handles[1])
     match op:
       case 'fav':
-        try:
-          favdb = updateLocalFav('./local', favdb)
+        try:          
           favdb = getFavList(favdb)
-          # favdb = updateLocalFav(favdb) #scan, update, and export local fav music song files, assuming I have uploaded to Google storage
+          favdb = updateLocalFav('./local', favdb) #scan, update, and export local fav music song files, assuming I have uploaded to Google storage
         finally:
           joblib.dump([favdb], fzdb) #save after parsing each NPI
           exportFav(favdb)
