@@ -114,8 +114,8 @@ def updateLocalFav(ld='./local', favdb={}):
     isMusicSong, mgc=isMusicSongFile(fp)
     if isMusicSong:
       #adding 2 essential keys
-      favdb[f'url:{fn}']=quote(gurl+fn, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
-      favdb[f'pic:{fn}']=quote(gurl+Path(fn).with_suffix('.jpg').name, safe=':/')
+      favdb[f'url:{Path(fn).stem}']=quote(gurl+fn, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
+      favdb[f'pic:{Path(fn).stem}']=quote(gurl+Path(fn).with_suffix('.jpg').name, safe=':/')
     else:
       logger.warning(f"Ignore {fp} since it is not audio BUT {mgc}")
   return favdb
