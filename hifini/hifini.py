@@ -83,20 +83,29 @@ def rsleep(maxSeconds=180, minSeconds=1):
   print(f"random sleep {rsec} seconds")
   time.sleep(rsec)
 
+#https://stackoverflow.com/questions/72938098/list-of-entries-files-and-folders-in-a-directory-tree-by-os-scandir-in-pytho
+from typing import Iterator, Tuple  
+def tree2list(directory: str) -> Iterator[Tuple[str, str, str]]:
+  import os
+  for i in os.scandir(directory):
+    if i.is_dir():
+      yield ["dir", i.name, i.path]
+      yield from tree2list(i.path)
+    else:
+      yield ["file", i.name, i.path]
 #----------------------------------------------------------------------------
 def updateLocalFav(ld='./local', favdb={}):
-  from pathlib import Path
+  # from pathlib import Path
   import os, magic, logging
   from urllib.parse import quote, unquote
   gurl = "https://storage.googleapis.com/xmusic/local/"  
-  for f in os.scandir(ld):
-    fn=os.path.join(ld,f.name)
-    logging.info(fn)
-    if not f.is_file(): continue    
-    mgc=magic.from_file(fn)
-    logging.info(f"file {fn} magic: {mgc}")
+  # for f in os.scandir(ld):
+  for ft, fn, fp in tree2list(ld):    
+    if ft=='dir': continue
+    mgc=magic.from_file(fp)
+    logging.info(f"file {fp} magic: {mgc}")
     if 'audio' in str.lower(mgc):
-      favdb[f'url:{Path(fn).name}']=quote(gurl+Path(fn).name, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
+      favdb[f'url:{fn}']=quote(gurl+fn, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
   return favdb
 
 def fn2googleStorageURL(fn, qURL):
