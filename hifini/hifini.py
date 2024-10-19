@@ -84,6 +84,21 @@ def rsleep(maxSeconds=180, minSeconds=1):
   time.sleep(rsec)
 
 #----------------------------------------------------------------------------
+def updateLocalFav(ld='./local', favdb={}):
+  from pathlib import Path
+  import os, magic, logging
+  from urllib.parse import quote, unquote
+  gurl = "https://storage.googleapis.com/xmusic/local/"  
+  for f in os.scandir(ld):
+    fn=os.path.join(ld,f.name)
+    logging.info(fn)
+    if not f.is_file(): continue    
+    mgc=magic.from_file(fn)
+    logging.info(f"file {fn} magic: {mgc}")
+    if 'audio' in str.lower(mgc):
+      favdb[f'url:{Path(fn).name}']=quote(gurl+Path(fn).name, safe=':/') #assume I have uploaded all local files to Google Storage, i.e., I don't waste time to check again
+  return favdb
+
 def fn2googleStorageURL(fn, qURL):
   from urllib.parse import quote, unquote
   gurl = f"https://storage.googleapis.com/xmusic/q/{fn}"
@@ -367,10 +382,11 @@ def main():
       case 'fav':
         try:
           favdb = getFavList(favdb)
+          favdb = updateLocalFav(favdb) #scan, update, and export local fav music song files, assuming I have uploaded to Google storage
         finally:
           joblib.dump([favdb], fzdb) #save after parsing each NPI
           exportFav(favdb)
-          joblib.dump([favdb], fzdb) #save cached google storaged URLs
+          joblib.dump([favdb], fzdb) #save cached google storaged URLs          
       case 'sign':
         sign4prize()
       case _:
