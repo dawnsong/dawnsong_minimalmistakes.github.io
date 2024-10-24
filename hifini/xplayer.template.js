@@ -2,7 +2,7 @@ var songs=[
   {
     name: '心语',
     artist: '韩红',
-    url: 'https://cs1.mp3.pm/listen/32055314/VWIycTVXa09TOHV0NWIzd25tSzZoNmVPakpYSFVyWlVDYkFTY1A0a0RCQnQ4Y1M2M3dldS9vY3UrZTlqMVZYVzRaZTZKY1Ryb05oRFFqUUY4MXpkK1dhRVZWU0h0Tnl0M0tEN1N2dXI3NTZ0OHlvbkh0L1I4M3VyYkp4ZXgwMlY/-_(mp3.pm).mp3' ,
+    url: 'https://m10.music.126.net/20241025071049/00447b54ffe8987601202836dc77afff/ymusic/b6a0/40b2/c2ec/56d125e8b8d92f37f9e084240090f750.mp3' ,
     lrc: '/hifini/心语-韩红.lrc',
     pic: 'http://img1.kuwo.cn/star/albumcover/500/29/33/2480739608.jpg',
   },
