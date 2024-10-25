@@ -192,11 +192,15 @@ def hifiniHeaders(rURL, bytesEnd=''):
 'dnt':'1',
 'referer':rURL,
 'cookie':bbsIDToken.strip(),
+'accept-language': 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+'sec-ch-ua': '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"' ,
 "sec-ch-ua-mobile": "?0",
+'sec-ch-ua-platform': 'Windows',
 "sec-fetch-dest": "audio",
 "sec-fetch-mode": "no-cors",
 "sec-fetch-site": "same-origin",
 # "referrer-policy": "strict-origin-when-cross-origin",
+'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
 }
   logger.info(hifiniHeaders)
   return hifiniHeaders
@@ -272,7 +276,7 @@ def getFavSongs(url, favdb={}):
     # rsleep(3)
     # qUrl=sbd.current_url
 
-    r=requestsHeader(mUrl, url) #requests.head(mUrl, allow_redirects=True, stream=False) #, headers=hifiniHeaders) #only metadata, not to download
+    r=requestsHeader(mUrl, href) #requests.head(mUrl, allow_redirects=True, stream=False) #, headers=hifiniHeaders) #only metadata, not to download
     qUrl=None
     if r.status_code in {200, 206}:
       logger.info(f"header: {r} , mUrl: {mUrl}")
@@ -295,7 +299,7 @@ def getFavSongs(url, favdb={}):
         favPage[f'file:{author}__{title}']=Path(fn).name #only basename
         if not Path(fn).exists():
           logger.info(f"Downloading song {fn} from {qUrl}")
-          with requestsGet(qUrl, url) as r: #, headers=hifiniHeaders) as r:
+          with requestsGet(qUrl, href) as r: #, headers=hifiniHeaders) as r:
             with open(fn, 'wb') as f:
                 shutil.copyfileobj(r.raw, f)
         else:
