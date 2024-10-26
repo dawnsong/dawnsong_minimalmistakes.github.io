@@ -215,7 +215,33 @@ def requestsGet(mURL, rURL):
     return requests.get(mURL, allow_redirects=True, stream=True, headers=hifiniHeaders(rURL)) #use stream to download hifini music
   # else:
   #   return requests.get(mURL, allow_redirects=True, stream=True) #stream=True since we want to save raw data to m4a file, stream=False also worked for qqMusic
-  
+
+
+def getDownLoadedFileName(waitTime=120):
+# method to get the downloaded file name
+#https://stackoverflow.com/questions/34548041/selenium-give-file-name-when-downloading
+  driver=sb.driver
+  driver.execute_script("window.open()")
+  # switch to new tab
+  driver.switch_to.window(driver.window_handles[-1])
+  # navigate to chrome downloads
+  driver.get('chrome://downloads')
+  # define the endTime
+  endTime = time.time()+waitTime
+  while True:
+      try:
+          # get downloaded percentage
+          downloadPercentage = driver.execute_script(
+              "return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('#progress').value")
+          # check if downloadPercentage is 100 (otherwise the script will keep waiting)
+          if downloadPercentage == 100:
+              # return the file name once the download is completed
+              return driver.execute_script("return document.querySelector('downloads-manager').shadowRoot.querySelector('#downloadsList downloads-item').shadowRoot.querySelector('div#content  #file-link').text")
+      except:
+          pass
+      time.sleep(1)
+      if time.time() > endTime:
+          break  
 
 def getFavSongs(url, favdb={}):
   sbd=sb.driver
@@ -278,7 +304,7 @@ def getFavSongs(url, favdb={}):
 
     r=requestsHeader(mUrl, href) #requests.head(mUrl, allow_redirects=True, stream=False) #, headers=hifiniHeaders) #only metadata, not to download
     qUrl=None
-    if r.status_code in {200, 206}:
+    if r.status_code in {200, 206, 401}: #401 means not authorized, but I still want to try if body is possible !
       logger.info(f"header: {r} , mUrl: {mUrl}")
       qUrl=r.url
       # if '404' in qUrl:
