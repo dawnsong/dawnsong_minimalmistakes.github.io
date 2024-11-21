@@ -9,3 +9,6 @@ servJekyll.sh~
 *.z
 *.lock
 /hifini/songs/*
+*.z
+*.mp3
+/hifini/songs.txt.20240922
