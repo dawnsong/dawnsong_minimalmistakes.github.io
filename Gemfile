@@ -21,7 +21,9 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "kramdown-syntax-coderay"
   gem "jekyll-pdf-embed"
-  gem 'jekyll-admin'
+  #gem 'jekyll-admin' #not supported by github.com
+  gem "liquid"
+  gem 'jekyll-postfiles'
 end
 
 

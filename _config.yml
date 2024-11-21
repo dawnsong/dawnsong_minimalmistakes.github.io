@@ -38,7 +38,8 @@ kramdown:
   # parse_span_html: true
   # parse_block_text: true
 # Outputting
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/New_York	# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
