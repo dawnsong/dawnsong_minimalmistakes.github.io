@@ -70,6 +70,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-algolia
+  - jekyll-pdf-embed
 
 author:
   name   : "Xiaowei Song"
