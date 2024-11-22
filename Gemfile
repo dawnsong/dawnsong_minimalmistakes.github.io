@@ -24,6 +24,7 @@ group :jekyll_plugins do
   #gem 'jekyll-admin' #not supported by github.com
   # gem "liquid"
   gem 'jekyll-postfiles'
+  gem "faraday-retry"
 end
 
 
