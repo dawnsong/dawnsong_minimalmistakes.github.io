@@ -23,8 +23,7 @@ group :jekyll_plugins do
   gem "jekyll-pdf-embed" 
   #gem 'jekyll-admin' #not supported by github.com
   # gem "liquid"
-  gem 'jekyll-postfiles'
-  gem "faraday-retry"
+  gem 'jekyll-postfiles'  
 end
 
 
