@@ -20,7 +20,7 @@ group :jekyll_plugins do
   gem "jekyll-redirect-from"
   gem "jekyll-seo-tag"
   gem "kramdown-syntax-coderay"
-  gem "jekyll-pdf-embed" , git: 'https://github.com/dawnsong/jekyll-pdf-embed.git'
+  gem "jekyll-pdf-embed" 
   #gem 'jekyll-admin' #not supported by github.com
   gem "liquid"
   gem 'jekyll-postfiles'
