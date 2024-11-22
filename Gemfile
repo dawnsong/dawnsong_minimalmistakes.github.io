@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem "kramdown-syntax-coderay"
   gem "jekyll-pdf-embed" 
   #gem 'jekyll-admin' #not supported by github.com
-  gem "liquid"
+  # gem "liquid"
   gem 'jekyll-postfiles'
 end
 
