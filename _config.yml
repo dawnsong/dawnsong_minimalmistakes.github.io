@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Robustness Research 
+title: Robustness Research
 email: dawnwei.song@gmail.com
 locale: en-US
 # theme: minimal-mistakes-jekyll  #jekyll-theme-hacker
 remote_theme: mmistakes/minimal-mistakes@4.26.2 #required by github.io
-# remote_theme: 
+# remote_theme:
 description: >- # this means to ignore newlines until "baseurl:"
   Research on robust machine learning with Big data on healthcare, MRI and cryoET/cryoEM
-twitter_username: dawnsongx 
-github_username: dawnsong 
+twitter_username: dawnsongx
+github_username: dawnsong
 minimal_mistakes_skin: dark #default
 search: true
 
@@ -43,7 +43,7 @@ kramdown:
 permalink: /:year/:month/:day/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: America/New_York	# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -76,16 +76,16 @@ plugins:
   - jekyll-pdf-embed
 
 author:
-  name   : "Xiaowei Song"
-  avatar : "/assets/images/xiaowei-xihu.png"
-  bio    : "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM. <br/>Open for collaborations: dawnwei.song (AT) gmail.com"
+  name: "Xiaowei Song"
+  avatar: "/assets/images/xiaowei-xihu.png"
+  bio: "Robust researching on machine learning (ML) with big data of Health care, Neuroimaging, and cryoET/cryoEM. <br/>Open for collaborations: dawnwei.song (AT) gmail.com"
   links:
     - label: "Google Scholar"
       icon: "fa-brands fa-google-scholar"
       url: "https://scholar.google.com/citations?user=b2M-4scAAAAJ"
     - label: "restfmri.net"
       icon: "fa-solid fa-brain"
-      url: "http://restfmri.net/forum/blog/1"      
+      url: "http://restfmri.net/forum/blog/1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dawnsong"
@@ -110,7 +110,7 @@ defaults:
   - scope:
       path: ""
       type: posts
-    values:    
+    values:
       layout: single
       author_profile: true
       read_time: true
@@ -121,7 +121,7 @@ defaults:
       show_date: true
       show_read_time: true
       show_tags: true
-      show_categories: true      
+      show_categories: true
       toc: true
       toc_label: "目录"
       toc_icon: "cloud-moon-rain" # "cog"
@@ -137,7 +137,7 @@ defaults:
       show_date: true
       show_read_time: true
       show_tags: true
-      show_categories: true      
+      show_categories: true
       toc: true
       toc_label: "目录"
       toc_icon: "cloud-sun-rain"
@@ -165,5 +165,5 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: "G-BYFL6HDBJH"
-    anonymize_ip: false # default  
+    anonymize_ip: false # default
 
